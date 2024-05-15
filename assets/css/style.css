@@ -55,13 +55,17 @@ a:hover {
 
 .navbar {
   background-color: #ffffff;
+  box-shadow: 10px 10px 10px rgba(186, 178, 178, 0.3);
 }
 
 .p-100 {
   padding-left: 100px !important;
   padding-right: 100px !important;
 }
-
+.pd-100 {
+  padding-left: 75px !important;
+  padding-right: 75px !important;
+}
 .navbar-brand img {
   max-height: 70px;
 }
@@ -92,7 +96,12 @@ a:hover {
   border: none;
   border-radius: 15px;
 }
-
+.consumer-features .news-item {
+  padding-left: 33px;
+}
+.consumer-features .product-magazine {
+  padding-left: 33px;
+}
 .consumer-features .list-unstyled a {
   color: #000000;
   font-size: 14px;
@@ -343,10 +352,10 @@ a:hover {
   margin-right: 10px;
 }
 .recharge-bill-left {
-  margin-top: 3%;
+  margin-top: 2.4% !important;
 }
-.recharge-bill-right {
-  margin-top: 2%;
+.recharge-bill-right-img {
+  margin-top: 12% !important;
 }
 .fa-star {
   color: rgba(253, 182, 21, 1);
@@ -572,7 +581,7 @@ a:hover {
 }
 
 .payment-solution {
-  margin-top: 8%;
+  margin-top: 9%;
 }
 
 .payment-solution h2 {
@@ -637,6 +646,9 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .payment-solution {
+    margin-top: 9%;
+  }
   .payment-solution h2 {
     font-size: 19px;
   }
@@ -1108,10 +1120,20 @@ border-radius: 50%;
   line-height: 1.7;
 }
 .img-card {
-  width: 35px;
-  height: 35px;
-  margin-right: 40px;
-  margin-top: 20px;
+  width: 65px;
+  height: 65px;
+  margin-right: 20px;
+  padding: 15px 15px;
+  border: 1.64px solid rgba(0, 129, 109, 0.1);
+  border-radius: 14px;
+}
+.img-card1 {
+  width: 67px;
+  height: 67px;
+  margin-right: 20px;
+  padding: 15px 15px;
+  border: 1.64px solid rgba(0, 129, 109, 0.1);
+  border-radius: 14px;
 }
 .svg-border {
   width: 75px;
@@ -1373,6 +1395,11 @@ hr {
     padding: 0 20px !important;
   }
 }
+@media (max-width: 600px) {
+  .pd-100 {
+    padding: 0 20px !important;
+  }
+}
 
 .splashoverlay {
   display: flex;
@@ -1540,4 +1567,377 @@ hr {
 
 .developedby p {
   display: inline-block;
+}
+
+/* Governmental headers */
+
+.governmental-header .img-content h3 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fdb615;
+  text-align: center;
+  margin-top: 30px;
+}
+.governmental-header .img-content h4 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 15px;
+}
+.governmental-header .img-content p {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin-top: 15px;
+}
+.for-business-bot {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+.for-business-bot:hover {
+  color: #ffffff;
+}
+
+.governmental-item .governmental_bg {
+  position: relative;
+  height: 620px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.governmental-header .img-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.governmental-header .header-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 615px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* "Get Started" */
+.bot-started-gov {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: #ffffff;
+  color: #003830;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+}
+
+.bot-started-gov:hover {
+  color: #5d6160;
+}
+
+/*  "Contact Us" */
+.contact-us-gov {
+  display: inline-block;
+  padding: 12px 23px;
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 10px;
+  border: 1px solid #ffffff;
+}
+
+.contact-us-gov:hover {
+  color: #ffffff;
+}
+
+/* Governmental headers */
+
+.get-startgov-btn {
+  background-color: #00816d;
+  color: #ffffff;
+  border-radius: 64px;
+  padding: 17px 28px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+.get-startgov-btn svg {
+  margin-left: 10px;
+}
+
+.payment-for-gov {
+  margin-top: 8%;
+}
+.momken-payment-title {
+  color: #003830;
+  font-size: 36px;
+  font-weight: 500;
+}
+.momken-payment-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: #5d6160;
+}
+
+.gov-img {
+  width: 100%;
+  height: 660px;
+  border-radius: 40px;
+  border: none;
+  margin-top: 5%;
+}
+.payment-for-gov {
+  margin-top: 10%;
+}
+.gov-imgs {
+  margin-top: 4%;
+}
+
+/* Explore Possible section */
+
+.gov-imgs .gov-img {
+  box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.08);
+}
+
+.card-industry img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 7px;
+}
+.card-industry-text {
+  margin-top: 10px;
+}
+.explpre-possible {
+  font-size: 43px;
+  font-weight: 500;
+  color: #003830;
+}
+.card-industry {
+  padding: 25px;
+
+  width: calc(100% - 2px) !important;
+  height: calc(100% - 25px) !important;
+  border-radius: 16px;
+  box-shadow: 10px 10px 70px rgba(0, 0, 0, 0.05);
+}
+.card-industry-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #002c15;
+}
+.card-industry-text {
+  color: #5d6160;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.gov-buttons-header {
+  margin-top: 35px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .img-content {
+    position: relative;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .governmental-header .img-content {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .img-content h3 {
+    font-size: 30px !important;
+  }
+  .img-content h4 {
+    font-size: 20px !important;
+  }
+  .img-content p {
+    font-size: 10px !important;
+  }
+  .for-business-bot {
+    margin-top: 10px !important;
+  }
+
+  .contact-us-gov {
+    margin-bottom: 15px;
+  }
+  .card-industry {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.02);
+    padding: 20px;
+  }
+  .explpre-possible {
+    font-size: 25px;
+  }
+  .momken-payment-title {
+    font-size: 27px;
+  }
+  .momken-payment-text br {
+    display: none;
+  }
+  .get-startgov-btn {
+    padding: 11px 20px;
+  }
+  .gov-imgs {
+    order: 2;
+  }
+
+  .payment-for-gov {
+    order: 1;
+  }
+  .gov-img {
+    height: auto;
+  }
+  .contact-us-gov {
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .grow-your-presence {
+    display: none;
+  }
+  .recharge-bill-right-img {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grow-your-presence {
+    display: block;
+  }
+  .recharge-bill-right-img {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .grow-your-presence {
+    display: none;
+  }
+  .recharge-bill-right-img {
+    display: block;
+  }
+}
+
+.grow-your-presence {
+  padding: 5px;
+  margin-top: 3%;
+}
+
+.images-section {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.mobile-img {
+  width: calc(100% - -15px);
+  height: auto;
+  object-fit: fill;
+  position: absolute;
+  z-index: 2;
+  top: calc(100% - 70px);
+
+  left: calc(100% - 600px);
+
+  padding: 70px;
+  transform: rotate(-1deg);
+}
+
+.grow-img {
+  left: calc(100% - 553px);
+  z-index: 1;
+  width: calc(100% - 420px);
+  height: auto;
+  position: relative;
+  border-radius: 20px;
+  margin-top: 5%;
+}
+
+.receive-img {
+  right: calc(100% - 260px);
+  top: calc(100% - -40px);
+  z-index: 1;
+  width: calc(100% - 380px);
+  height: auto;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.bg-image {
+  width: calc(100% - 238px);
+
+  height: auto;
+  position: absolute;
+  top: calc(100% - 105px);
+
+  left: calc(100% - 490px);
+
+  z-index: 0;
+  padding-left: 50px;
+}
+
+@media only screen and (max-width: 992px) {
+  .bg-image {
+    width: calc(100% - 5px);
+
+    height: auto;
+    position: absolute;
+    width: calc(100% - 120px);
+    left: calc(100% - 280px);
+    top: calc(100% - 70px);
+    z-index: 0;
+    padding-left: 50px;
+  }
+  .grow-your-presence {
+    padding: 5px;
+    top: 50%;
+  }
+  .grow-img {
+    left: calc(100% - 300px);
+    z-index: 1;
+    width: calc(100% - 200px);
+    height: auto;
+    position: relative;
+    border-radius: 20px;
+  }
+  .receive-img {
+    left: calc(100% - 500px);
+    transform: translate(20%, 210%);
+    z-index: 1;
+    width: calc(100% - 220px);
+    height: auto;
+    position: relative;
+    border-radius: 20px;
+  }
+  .mobile-img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    position: absolute;
+    z-index: 2;
+    top: calc(100% - 50px);
+    left: calc(100% - 320px);
+    padding: 50px;
+    transform: rotate(-1deg);
+  }
 }
