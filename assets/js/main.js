@@ -86,33 +86,33 @@ $(document).ready(function () {
   });
 });
 
-  $(".brands-row").slick({
-    slidesToShow: 8,
-    slidesToScroll: 1,
-    speed: 3500,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    arrows: false,
-    dots: false,
-    infinite: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
+$(".brands-row").slick({
+  slidesToShow: 8,
+  slidesToScroll: 1,
+  speed: 3500,
+  autoplay: true,
+  autoplaySpeed: 0,
+  cssEase: "linear",
+  arrows: false,
+  dots: false,
+  infinite: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
-    ],
-  });
+    },
+  ],
+});
 
 $(document).ready(function () {
   if (window.matchMedia("(max-width: 768px)").matches) {

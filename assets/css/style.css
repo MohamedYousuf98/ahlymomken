@@ -639,12 +639,21 @@ a:hover {
   opacity: 80%;
   font-size: 18px;
   font-weight: 400;
+  margin-top: 20px;
 }
-
+.content-left {
+  margin-bottom: 40px;
+}
 .recharge-bill {
   margin-top: 8%;
 }
 
+.vertical-image {
+  width: 4px;
+  height: 450px;
+  margin-right: 20px;
+  margin-bottom: 70px;
+}
 @media (max-width: 768px) {
   .payment-solution {
     margin-top: 9%;
@@ -664,10 +673,20 @@ a:hover {
   }
   .content-left .number {
     font-size: 20px;
-    margin-top: 35px;
   }
   .content-left .number-description {
     font-size: 15px;
+    margin-bottom: 40px;
+  }
+  .content-left {
+    padding-bottom: 19px;
+  }
+  .vertical-image {
+    width: 4px;
+    height: 470px !important;
+    margin-right: 20px;
+    object-fit: cover;
+    padding-bottom: 8%;
   }
   .vertical-line {
     height: 380px;
@@ -1236,9 +1255,9 @@ border-radius: 50%;
 }
 .fifth-img {
   position: relative;
-  top: 10%;
+  margin-top: 85px;
   transform: translateY(50%);
-  left: 75px;
+  left: 70px;
   z-index: 0 !important;
   margin-bottom: 70px;
 }
@@ -1250,6 +1269,9 @@ border-radius: 50%;
   width: 288px;
   height: auto;
   z-index: 2 !important;
+}
+.one-app-payments {
+  margin-top: 5%;
 }
 @media (max-width: 576px) {
   .main-image {
@@ -1818,6 +1840,12 @@ hr {
   }
   .recharge-bill-right-img {
     display: block;
+  }
+  .img-card {
+    margin-top: 20px;
+  }
+  .img-card1 {
+    margin-top: 20px;
   }
 }
 
