@@ -33,6 +33,9 @@ a:hover {
   font-size: 15px;
   width: 100%;
 }
+.btn-contact:hover {
+  color: #09dcbd;
+}
 
 .navbar-nav .nav-item.dropdown .nav-link#navbarDropdown4 {
   color: #000000;
@@ -1725,9 +1728,11 @@ hr {
 }
 
 .get-startgov-btn:hover {
-  color: #ffffff;
+  color: #09dcbd;
 }
-
+.get-startgov-btn:hover svg path {
+  stroke: #09dcbd;
+}
 .get-startgov-btn svg {
   margin-left: 10px;
 }
