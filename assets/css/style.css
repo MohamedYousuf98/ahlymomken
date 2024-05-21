@@ -2681,9 +2681,12 @@ hr {
 .podcast-innerpage {
   position: relative;
   box-shadow: 0px 6px 24px 0px #0000000f;
-  padding: 50px;
+  padding: 40px;
   border-radius: 60px;
   margin-top: 40px;
+  display: flex;
+  align-items: center;
+  align-items: center;
 }
 
 .img-podcast-content {
@@ -2779,9 +2782,9 @@ hr {
 }
 .small-image-innerpage {
   position: absolute;
-  top: 60px;
+  top: 45px;
   right: 1;
-  left: 18%;
+  left: 17.5%;
   z-index: 1;
   padding: 20px;
 }
@@ -2809,9 +2812,10 @@ hr {
 }
 .data-driven-content {
   margin-left: 25px;
+  margin-top: 40px;
 }
 .data-driven-content h3 {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
   margin-bottom: 25px;
   text-transform: capitalize;
@@ -2837,14 +2841,90 @@ hr {
   margin-right: 8px;
   object-fit: cover;
 }
+
+@media only screen and (max-width: 992px) {
+  .small-image-innerpage,
+  .podcast-image,
+  .img-podcast-innerpage-content {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .mobile-image {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .podcast-innerpage {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
-
+  .img-podcast-innerpage-content {
+    margin-top: 20px;
+  }
+  .media-links {
+    margin-top: 20px;
+  }
   .additional-text {
     margin-top: 20px;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .podcast-innerpage {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-podcast-container,
+  .data-driven-content {
+    width: 100%;
+  }
+  .small-image-innerpage {
+    position: absolute;
+    top: 60px;
+    right: 20%;
+    left: 60%;
+    z-index: 1;
+    padding: 20px;
+  }
+  .small-image-innerpage {
+    padding: 10px;
+  }
+  .data-driven-content h3 {
+    font-size: 20px;
+  }
+  .data-driven-content h3 br {
+    display: none;
+  }
+
+  .article-header {
+    margin-top: 60%;
+  }
+  .news-insight-text {
+    font-size: 17px;
+  }
+  .news-insight-paragraph {
+    font-size: 16px;
+  }
+  .news-insight-paragraph br {
+    display: none;
+  }
+  .listen-now-link {
+    font-size: 12px;
+  }
+  .media-links img {
+    width: 30px;
+    height: 30px;
+  }
+  .article-content h3 {
+    font-size: 16px;
+  }
+  .article-content p {
+    font-size: 16px;
+  }
+  .article-content p br {
+    display: none;
   }
 }

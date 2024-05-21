@@ -162,3 +162,9 @@ document
 
     this.classList.add("active");
   });
+window.addEventListener("load", function () {
+  var nextElement = document.querySelector(".page-item.next");
+  if (nextElement) {
+    nextElement.click();
+  }
+});
