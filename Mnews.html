@@ -211,12 +211,16 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
   <div class="row">
     <div class="col-md-12 col-sm-12">
       <div class="last-news-section">
-        <h2 class="last-news-title">Last news</h2>
-        <ul class="news-menu list-unstyled d-flex flex-wrap justify-content-center">
-          <li><a href="#" class="all-word selected">All</a></li>
-          <li><a href="#" class="news-word">News</a></li>
-          <li><a href="#" class="articles-word">Articles</a></li>
-        </ul>
+        <h2 class="last-news-title"data-aos="fade-up" data-aos-duration="1000">Podcasts</h2>
+          <ul class="news-menu list-unstyled d-flex flex-wrap justify-content-center"data-aos="fade-up" data-aos-duration="500">
+            <!-- Menu for filtering news -->
+            <li data-aos="fade-up" data-aos-duration="800"><a href="#" class="all-word">All</a></li>
+            <!-- Link for displaying all news -->
+            <li data-aos="fade-up" data-aos-duration="1000"><a href="#" class="news-word">News</a></li>
+            <!-- Link for displaying news only -->
+            <li data-aos="fade-up" data-aos-duration="1200"><a href="#" class="articles-word">Articles</a></li>
+            <!-- Link for displaying articles only -->
+          </ul>
       </div>
     </div>
 
@@ -226,7 +230,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
       <div class="news-item ">
         <img src="assets/images/medianews-imgs.jpeg" alt="News 1" class="img-fluid news-image"data-aos="fade-up" data-aos-duration="600">
         <h3 data-aos="fade-up" data-aos-duration="900">Lorem ipsum dolor sit amet consectetur.</h3>
-        <p data-aos="fade-up" data-aos-duration="1200">Lorem ipsum dolor sit amet consectetur. Sed id morbi arcu nisi lacus aliquet a.</p>
+        <p data-aos="fade-up" data-aos-duration="1200">Lorem ipsum dolor sit amet consectetur. Sed id morbi arcu nisi lacus aliquet a.  </p>
       </div>
       <div class="verticle-line-news"></div>
       <div class="author-info">
@@ -344,37 +348,41 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
   </div>
 </div>
 
+
+
+
+
 <!-- Pagination -->
 <div class="container-fluid p-100">
-<div class="pagination-container mt-4">
-  <nav aria-label="Page navigation" class="w-100">
+  <div class="pagination-container mt-4">
+    <nav aria-label="Page navigation" class="w-100">
       <ul class="pagination justify-content-between mx-auto">
-          <li class="page-item d-none d-sm-block">
-              <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true"><i class="fa-solid fa-arrow-left"data-aos="fade-up" data-aos-duration="700"></i></span>
-                  <span class="pagination-word-left left"data-aos="fade-up" data-aos-duration="1000">Previous</span>
-              </a>
-          </li>
-           <!-- Pagination Numbers -->
-          <li class="page-item active"data-aos="fade-up" data-aos-duration="400"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"data-aos="fade-up" data-aos-duration="600"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"data-aos="fade-up" data-aos-duration="800"><a class="page-link" href="#">3</a></li>
-          <li class="page-item disabled"data-aos="fade-up" data-aos-duration="900"><span class="page-link">...</span></li>
-          <li class="page-item"data-aos="fade-up" data-aos-duration="1000"><a class="page-link" href="#">8</a></li>
-          <li class="page-item"data-aos="fade-up" data-aos-duration="1200"><a class="page-link" href="#">9</a></li>
-          <li class="page-item"data-aos="fade-up" data-aos-duration="1400"><a class="page-link" href="#">10</a></li>
-          <li class="page-item d-none d-sm-block">
-              <!-- Next Button -->
-              <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true"></span>
-                  <span class="pagination-word-right right"data-aos="fade-up" data-aos-duration="700">Next</span>
-                  <i class="fa-solid fa-arrow-right"data-aos="fade-up" data-aos-duration="1000"></i>
-              </a>
-          </li>
+        <li class="page-item previous">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true"><i class="fa-solid fa-arrow-left"></i></span>
+            <span class="pagination-word-left left">Previous</span>
+          </a>
+        </li>
+        <li class="page-item active" data-aos="fade-up" data-aos-duration="400"><a class="number" href="#">1</a></li>
+        <li class="page-item" data-aos="fade-up" data-aos-duration="600"><a class="number" href="#">2</a></li>
+        <li class="page-item" data-aos="fade-up" data-aos-duration="800"><a class="number" href="#">3</a></li>
+        <li class="page-item disabled" data-aos="fade-up" data-aos-duration="900"><span class="number">...</span></li>
+        <li class="page-item" data-aos="fade-up" data-aos-duration="1000"><a class="number" href="#">8</a></li>
+        <li class="page-item" data-aos="fade-up" data-aos-duration="1200"><a class="number" href="#">9</a></li>
+        <li class="page-item" data-aos="fade-up" data-aos-duration="1400"><a class="number" href="#">10</a></li>
+        <li class="page-item next">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true"></span>
+            <span class="pagination-word-right right active">Next</span>
+            <i class="fa-solid fa-arrow-right "></i>
+          </a>
+        </li>
       </ul>
-  </nav>
+    </nav>
+  </div>
 </div>
-</div>
+
+
 
 
 

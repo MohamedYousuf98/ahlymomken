@@ -127,24 +127,38 @@ $(document).ready(function () {
   }
 });
 
-const menuItems = document.querySelectorAll('.news-menu li');
+const menuItems = document.querySelectorAll(".news-menu li");
 
 // Make the "All" list item active by default
-document.querySelector('.news-menu li:first-child').classList.add('selected');
+document.querySelector(".news-menu li:first-child").classList.add("selected");
 
-menuItems.forEach(menuItem => {
-  menuItem.addEventListener('click', () => {
-    document.querySelectorAll('.news-menu li.selected').forEach(item => item.classList.remove('selected'));
-    menuItem.classList.add('selected');
+menuItems.forEach((menuItem) => {
+  menuItem.addEventListener("click", () => {
+    document
+      .querySelectorAll(".news-menu li.selected")
+      .forEach((item) => item.classList.remove("selected"));
+    menuItem.classList.add("selected");
   });
 });
 
-function setActive(element) {
-  // Remove the 'selected' class from all other elements
-  const allLinks = document.querySelectorAll('.news-menu a');
-  allLinks.forEach(link => link.classList.remove('selected'));
+document
+  .querySelector(".page-item.next")
+  .addEventListener("click", function () {
+    var previousActive = document.querySelector(".page-item.previous.active");
+    if (previousActive) {
+      previousActive.classList.remove("active");
+    }
 
-  // Add the 'selected' class to the clicked element
-  element.classList.add('selected');
-}
+    this.classList.add("active");
+  });
 
+document
+  .querySelector(".page-item.previous")
+  .addEventListener("click", function () {
+    var nextActive = document.querySelector(".page-item.next.active");
+    if (nextActive) {
+      nextActive.classList.remove("active");
+    }
+
+    this.classList.add("active");
+  });
