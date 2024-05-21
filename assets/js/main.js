@@ -127,20 +127,6 @@ $(document).ready(function () {
   }
 });
 
-const menuItems = document.querySelectorAll(".news-menu li");
-
-// Make the "All" list item active by default
-document.querySelector(".news-menu li:first-child").classList.add("selected");
-
-menuItems.forEach((menuItem) => {
-  menuItem.addEventListener("click", () => {
-    document
-      .querySelectorAll(".news-menu li.selected")
-      .forEach((item) => item.classList.remove("selected"));
-    menuItem.classList.add("selected");
-  });
-});
-
 document
   .querySelector(".page-item.next")
   .addEventListener("click", function () {
