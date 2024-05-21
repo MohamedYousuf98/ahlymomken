@@ -2701,6 +2701,9 @@ hr {
   padding: 20px;
   margin-left: 20px;
 }
+.podcast-imgs {
+  height: 643px;
+}
 .podcast-imgs img {
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
@@ -2736,6 +2739,8 @@ hr {
   font-weight: 500;
   color: #5d6160;
   margin-top: 15px;
+  height: 80px; /* Define a width for the paragraph */
+  overflow: hidden;
 }
 .podcast-text {
   box-shadow: 0px 7px 12px 0px #00000014;
