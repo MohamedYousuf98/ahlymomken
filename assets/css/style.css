@@ -3116,6 +3116,90 @@ hr {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+.pointsale-img {
+  margin-top: 6%;
+}
+.pointsale-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.pointsale-text h2 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-top: 40%;
+  margin-bottom: 30px;
+}
+.pointsale-text p {
+  font-size: 16;
+  font-weight: 500;
+  color: #5d6160;
+}
+.stop-solution {
+  font-size: 28px;
+  font-weight: 800;
+  color: #171d1c;
+}
+.stop-solution p {
+  font-size: 21px;
+  font-weight: 500;
+  color: #171d1c;
+}
+
+.card-pos img {
+  width: 80px;
+  height: 80px;
+  border-radius: 14%;
+  object-fit: cover;
+}
+
+.explpre-possible {
+  font-size: 43px;
+  font-weight: 500;
+  color: #003830;
+}
+.card-pos {
+  width: calc(100% - 2px) !important;
+  height: calc(100% - 25px) !important;
+}
+.card-pos-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #002c15 !important;
+}
+.card-pos-text {
+  color: #5d6160;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.card-pos-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #171d1c;
+}
+.card-pos-text {
+  color: #5d6160;
+  font-size: 18px;
+  font-weight: 400;
+}
+.pos {
+  box-shadow: 0px 5px 20px 0px #00000012;
+  padding: 60px;
+  border-radius: 45px;
+}
+.card-pos .small-pos-image {
+  position: absolute;
+  top: 50%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+}
+
 @media only screen and (max-width: 1199px) {
   .img-content-sales {
     position: relative;
