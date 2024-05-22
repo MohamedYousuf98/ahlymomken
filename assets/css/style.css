@@ -730,6 +730,9 @@ a:hover {
   .text-icon p {
     font-size: 15px !important;
   }
+  .text-icon-momkenpaysol p {
+    font-size: 15px !important;
+  }
   .bottom {
     padding: 8px 18px !important;
   }
@@ -1392,6 +1395,10 @@ border-radius: 50%;
   display: flex;
   flex-direction: row;
 }
+.text-icon-momkenpaysol {
+  display: flex;
+  flex-direction: row;
+}
 .image-true {
   width: 25px;
   height: 25px;
@@ -1403,6 +1410,12 @@ border-radius: 50%;
   font-weight: 400;
   color: #171d1c;
   line-height: 1.9;
+}
+.text-icon-momkenpaysol p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #5d6160;
+  line-height: 2.2;
 }
 .one-app-for-all {
   font-size: 45px;
@@ -1661,6 +1674,12 @@ hr {
   width: 100%;
   object-fit: cover;
 }
+.governmental-item .pointofsal-header_bg {
+  position: relative;
+  height: 620px;
+  width: 100%;
+  object-fit: cover;
+}
 
 .governmental-header .img-content {
   position: absolute;
@@ -1682,13 +1701,14 @@ hr {
 /* "Get Started" */
 .bot-started-gov {
   display: inline-block;
-  padding: 12px 22px;
+  padding: 17px 33px;
   background-color: #ffffff;
   color: #003830;
   text-decoration: none;
   font-size: 16px;
   font-weight: 700;
-  border-radius: 12px;
+  border-radius: 40px;
+  margin-top: 30px;
 }
 
 .bot-started-gov:hover {
@@ -1698,15 +1718,16 @@ hr {
 /*  "Contact Us" */
 .contact-us-gov {
   display: inline-block;
-  padding: 12px 23px;
+  padding: 17px 33px;
   background-color: transparent;
   color: #ffffff;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 40px;
   font-size: 16px;
   font-weight: 700;
-  margin-right: 10px;
   border: 1px solid #ffffff;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .contact-us-gov:hover {
@@ -1799,7 +1820,7 @@ hr {
   font-weight: 500;
   margin-top: 20px;
   line-height: 1.6;
-  color: #002c15;
+  color: #002c15 !important;
 }
 .card-industry-text {
   color: #5d6160;
@@ -1808,6 +1829,7 @@ hr {
   margin-top: 10px;
   padding-bottom: 20px;
 }
+
 .gov-buttons-header {
   margin-top: 35px;
 }
@@ -2715,6 +2737,7 @@ hr {
   width: 100%;
   height: 370px;
 }
+
 .img-podcast-content h5 {
   font-size: 21px;
   font-weight: 300;
@@ -2738,6 +2761,8 @@ hr {
   font-weight: 700;
   color: #171d1c;
   margin-top: 8px;
+  max-height: 50px; /* Define a width for the paragraph */
+  overflow: hidden;
 }
 .podcast-text p {
   font-size: 18px;
@@ -2934,5 +2959,180 @@ hr {
   }
   .article-content p br {
     display: none;
+  }
+}
+
+/* Momkn pay solution page */
+
+.momkn-soluton-title h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #5d6160;
+  margin-top: 35%;
+}
+.simple-payment-title h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #171d1c;
+  margin-bottom: 20px;
+  margin-top: 18%;
+}
+.simple-payment-title p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #5d6160;
+}
+
+.momkn-solution-img img {
+  height: 550px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.momkn-solution-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 30px;
+}
+.momkn-solution-img {
+  position: relative;
+  overflow: hidden;
+}
+.card-business-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  color: #002c15 !important;
+}
+.card-business-text {
+  color: #5d6160;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.payment-Einvoicing img {
+  border-radius: 30px 30px 0px 0px;
+  object-fit: cover;
+  width: 100%;
+  height: 445px;
+}
+
+.payment-invoicing-text {
+  box-shadow: 0px 7px 12px 0px #00000014;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.payment-invoicing-text h3 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #002c15;
+  letter-spacing: -2px;
+}
+.payment-invoicing-text p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #5d6160;
+  letter-spacing: -0.25px;
+}
+.payment-Einvoicing {
+  padding: 0 27px;
+  margin-top: 7%;
+}
+@media (max-width: 767px) {
+  .momkn-soluton-title h2 {
+    font-size: 34px;
+  }
+  .simple-payment-title h2 br {
+    display: none;
+  }
+  .simple-payment-title h2 {
+    font-size: 19px;
+    margin-top: 20px;
+  }
+  .simple-payment-title p br {
+    display: none;
+  }
+  .simple-payment-title p {
+    font-size: 19px;
+  }
+  .momkn-solution-img img {
+    height: auto;
+  }
+  .gov-imgs {
+    height: auto;
+  }
+  .payment-Einvoicing {
+    padding: 0 10px;
+    margin-top: 50px;
+  }
+  .payment-Einvoicing-img {
+    height: auto;
+  }
+  .explpre-possible {
+    font-size: 22px !important;
+  }
+  .explpre-possible br {
+    display: none;
+  }
+}
+
+/* Point of sales page */
+
+.governmental-header .img-content-sales h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #fdb615;
+  text-align: center;
+  margin-top: 30px;
+}
+.governmental-header .img-content-sales h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 25px;
+}
+.governmental-header .img-content-sales p {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin-top: 25px;
+}
+.governmental-header .img-content-sales {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media only screen and (max-width: 1199px) {
+  .img-content-sales {
+    position: relative;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .governmental-header .img-content-sales {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .img-content-sales h3 {
+    font-size: 30px !important;
+  }
+  .img-content-sales h4 {
+    font-size: 20px !important;
   }
 }
