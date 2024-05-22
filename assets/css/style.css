@@ -2395,6 +2395,8 @@ hr {
 .last-news-imgs .news-item img {
   border-radius: 20px;
   object-fit: cover;
+  height: 280px;
+  width: 100%;
 }
 
 .last-news-imgs .news-item h3 {
