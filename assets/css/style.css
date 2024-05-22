@@ -2848,11 +2848,17 @@ hr {
   font-weight: 700;
   margin-bottom: 25px;
   text-transform: capitalize;
+  width: 760px;
+  height: 70px;
+  overflow: hidden;
 }
 .data-driven-content p {
   font-size: 18px;
   font-weight: 500;
   color: #5d6160;
+  width: 690px;
+  height: 50px;
+  overflow: hidden;
 }
 .data-driven-content .divider {
   border: 1px solid var(--Dark-grey, #5d6160);
