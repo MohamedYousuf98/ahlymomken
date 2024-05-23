@@ -1799,6 +1799,13 @@ hr {
   object-fit: cover;
   margin-right: 7px;
 }
+.card-industry-pos img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 7px;
+}
 .card-industry-text {
   margin-top: 10px;
 }
@@ -1814,6 +1821,14 @@ hr {
   height: calc(100% - 25px) !important;
   border-radius: 16px;
   box-shadow: 10px 10px 70px rgba(0, 0, 0, 0.05);
+}
+.card-industry-pos {
+  padding: 25px;
+
+  width: calc(100% - 2px) !important;
+  height: calc(100% - 25px) !important;
+  border-radius: 16px;
+  box-shadow: 0px 6px 24px 0px #00000014;
 }
 .card-industry-title {
   font-size: 18px;
@@ -3045,17 +3060,23 @@ hr {
   font-weight: 500;
   color: #002c15;
   letter-spacing: -2px;
+  height: 40px;
+  overflow: hidden;
 }
+
 .payment-invoicing-text p {
   font-size: 18px;
   font-weight: 400;
   color: #5d6160;
   letter-spacing: -0.25px;
+  height: 80px;
+  overflow: hidden;
 }
 .payment-Einvoicing {
   padding: 0 27px;
   margin-top: 7%;
 }
+
 @media (max-width: 767px) {
   .momkn-soluton-title h2 {
     font-size: 34px;
@@ -3207,7 +3228,48 @@ hr {
   width: 25px;
   height: 25px;
 }
+.card-pos-join {
+  width: calc(100% - 2px) !important;
+  height: calc(100% - 25px) !important;
+}
+.join-ahlymomken-text {
+  font-size: 38px;
+  font-weight: 800;
+  margin-top: 3%;
+  margin-bottom: 40px;
+}
+.pos-join-text p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #5d6160;
+  line-height: 1.7;
+  opacity: 80%;
+  margin-top: 20px;
+}
+.pos-join-text h4 {
+  font-size: 21px;
+  font-weight: 800;
+  color: #171d1c;
+}
+.pos-join-text {
+  margin-left: 20px;
+}
+.card-pos-join {
+  box-shadow: 0px 6px 24px 0px #00000012;
+  padding: 30px;
+  width: calc(100% - 2px) !important;
+  height: calc(100% - 25px) !important;
+  border-radius: 30px;
+}
 
+.small-pos-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+}
 @media only screen and (max-width: 1199px) {
   .img-content-sales {
     position: relative;
