@@ -1240,9 +1240,9 @@ border-radius: 50%;
 .first-img,
 .second-img {
   position: relative;
-  top: 50%;
-  left: 80%;
-  transform: translate(-35%, -115%);
+  top: 60%;
+  left: 20%;
+  transform: translate(-35%, -110%);
   z-index: 0 !important;
   margin-top: 30px;
 }
@@ -1276,7 +1276,7 @@ border-radius: 50%;
 }
 .fifth-img {
   position: relative;
-  margin-top: 85px;
+  margin-top: 30px !important;
   transform: translateY(50%);
   left: 70px;
   z-index: 0 !important;
@@ -1288,7 +1288,7 @@ border-radius: 50%;
 }
 .main-image img {
   width: 288px;
-  height: auto;
+  height: 535px;
   z-index: 2 !important;
 }
 .one-app-payments {
@@ -3225,8 +3225,16 @@ hr {
   top: 50%;
   left: 14%;
   transform: translate(-50%, -50%);
-  width: 25px;
-  height: 25px;
+  width: 34px;
+  height: 34px;
+}
+.card-pos svg {
+  position: absolute;
+  top: 50%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
 }
 .card-pos-join {
   width: calc(100% - 2px) !important;
@@ -3264,11 +3272,11 @@ hr {
 
 .small-pos-icon {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 25%;
+  left: 25%;
   transform: translate(-50%, -50%);
-  width: 25px;
-  height: 25px;
+  width: 42px;
+  height: 42px;
 }
 @media only screen and (max-width: 1199px) {
   .img-content-sales {
@@ -3284,9 +3292,60 @@ hr {
 }
 @media screen and (max-width: 767px) {
   .img-content-sales h3 {
-    font-size: 30px !important;
+    font-size: 30px;
+    margin-bottom: 8px !important;
+    margin-top: 11px !important;
   }
   .img-content-sales h4 {
-    font-size: 20px !important;
+    font-size: 13px !important;
+    margin-top: 11px !important;
+  }
+  .img-content-sales p {
+    font-size: 10px !important;
+    margin-top: 12px !important;
+  }
+  .img-content-sales h4 br {
+    display: none !important;
+  }
+  .img-content-sales {
+    margin-bottom: 10px !important;
+  }
+  .bot-started-gov {
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
+    padding: 10px 26px;
+  }
+  .contact-us-gov {
+    margin-top: 10px !important;
+    margin-right: 20px !important;
+    padding: 10px 26px;
+  }
+  .pointsale-text h2 {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+  .pointsale-text p {
+    font-size: 17px;
+  }
+  .pointsale-text p br {
+    display: none;
+  }
+  .pointsale-img img {
+    height: auto;
+  }
+  .stop-solution {
+    font-size: 17px;
+  }
+  .stop-solution br {
+    display: none;
+  }
+  .pos {
+    padding: 40px;
+  }
+  .join-ahlymomken-text {
+    font-size: 25px;
+  }
+  .pos-join-text p {
+    font-size: 12px;
   }
 }
