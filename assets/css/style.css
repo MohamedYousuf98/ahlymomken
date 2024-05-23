@@ -1442,6 +1442,9 @@ border-radius: 50%;
   font-weight: 400;
   color: #171d1c;
 }
+.consumer-service-img img {
+  object-fit: cover;
+}
 
 hr {
   border: 2px solid #ffcc00;
@@ -3277,6 +3280,25 @@ hr {
   transform: translate(-50%, -50%);
   width: 42px;
   height: 42px;
+}
+
+.consumer-service-section {
+  padding: 50px 0;
+}
+
+.consumer-section-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #00816d;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.consumer-service-img img {
+  height: 312px;
+  width: 100%;
+  margin-bottom: 40px;
+  border-radius: 30px;
 }
 @media only screen and (max-width: 1199px) {
   .img-content-sales {
