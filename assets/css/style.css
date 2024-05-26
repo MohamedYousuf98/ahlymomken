@@ -3872,4 +3872,19 @@ hr {
   .vacancy-details-texts li {
     font-size: 15px;
   }
+  .categories-word img {
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    width: 15px;
+    height: 15px;
+  }
+  .dropdown-icon img {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+  }
+  .dropdown-icon {
+    margin-left: 0px !important;
+    margin-right: 6px !important;
+  }
 }
