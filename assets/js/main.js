@@ -127,6 +127,19 @@ $(document).ready(function () {
   }
 });
 
+$(document).ready(function () {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    $(".careers-slider").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      arrows: false,
+      dots: false,
+    });
+  }
+});
+
 document
   .querySelector(".page-item.next")
   .addEventListener("click", function () {
