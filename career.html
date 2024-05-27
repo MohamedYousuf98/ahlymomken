@@ -192,21 +192,22 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
       <div class="search-words-career">
         <input type="text" class="word search-vacancies-word" data-aos="fade-up" data-aos-duration="500" placeholder="Search for vacancies">
         <div class="word categories-word" data-aos="fade-up" data-aos-duration="800">
-          <img src="assets/images/category-2.svg" alt="Category" class="category-icon ml-3">All Categories
+          <img src="assets/images/category-2.svg" alt="Category" class="category-icon ml-3"> <span id="selectedCategory">All Categories</span>
           <img src="assets/images/arrow-circle-down.svg" alt="Dropdown" class="dropdown-icon">
-          <ul class="category-dropdown">
-            <li><a href="#">Category 1</a></li>
-            <li><a href="#">Category 2</a></li>
-            <li><a href="#">Category 3</a></li>
-          </ul>
-        </div>
+          <select class="category-dropdown" size="3" onchange="updateSelectedCategory(this)"> 
+              <option value="1">Category 1</option>
+              <option value="2">Category 2</option>
+              <option value="3">Category 3</option>
+          </select>
+      </div>
         <a href="your-link-here" class="word search-word" data-aos="fade-up" data-aos-duration="1100">SEARCH</a>
       </div>
     </div>
   </section>
   
-
-    
+ 
+ 
+  
 
     <div class="container-fluid p-100 mt-5">
       <div class="row">

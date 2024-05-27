@@ -167,3 +167,10 @@ window.addEventListener("load", function () {
     nextElement.click();
   }
 });
+
+function updateSelectedCategory(select) {
+  var selectedOption = select.options[select.selectedIndex];
+  var selectedCategoryText = selectedOption.text;
+  document.getElementById("selectedCategory").textContent =
+    selectedCategoryText;
+}
