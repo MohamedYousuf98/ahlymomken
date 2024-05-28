@@ -45,10 +45,10 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
-  <title>Al-Ahly Momken-Podcast Magazine</title>
+  <title>Al-Ahly Contact page</title>
 </head>
 
-<body style="background-image: url('assets/images/carrer-headerbg.png'); background-size: cover; background-position: center;">
+<body >
  
 
   
@@ -153,93 +153,93 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
-  
 
-
-  <section class="contact-section ">
+  <section class="contact-section" style="background-image: url('assets/images/contact-bg.png'); background-size: cover; background-position: center;">
     <div class="container-fluid p-100">
-      <div class="row">
-        <div class="col-md-6 contact-details">
-          <h2>عنوان</h2>
-          <p>نص</p>
+        <div class="row">
+            <!-- left content -->
+            <div class="col-md-6 contact-details">
+                <h2 data-aos="fade-up" data-aos-duration="1000">Reach out <br>to <span class="us-text">us</span></h2>
+
+                <div class="contact-content d-flex align-items-left mt-5">
+                    <div class="contact-item " >
+                        <div class="contact-icons">
+                            <img src="assets/images/message-svg.svg" data-aos="fade-up" data-aos-duration="1000" alt="Image" width="100" height="100">
+                        </div>
+                        <div class="contact-info mt">
+                            <h3 data-aos="fade-up" data-aos-duration="1000">Email</h3>
+                            <p data-aos="fade-up" data-aos-duration="1000">contact@Alahlymomkn.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icons">
+                            <img src="assets/images/message-svg.svg" data-aos="fade-up" data-aos-duration="1000" alt="Image" >
+                        </div>
+                        <div class="contact-info">
+                            <h3 data-aos="fade-up" data-aos-duration="1000">Phone</h3>
+                            <p data-aos="fade-up" data-aos-duration="1000">16379</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item mb-2">
+                        <div class="contact-icons">
+                            <img src="assets/images/message-svg.svg" data-aos="fade-up" data-aos-duration="1000" alt="Image" >
+                        </div>
+                        <div class="contact-info">
+                            <h3 data-aos="fade-up" data-aos-duration="1000">Address</h3>
+                            <p data-aos="fade-up" data-aos-duration="1000">12 G Ahmed Kamel St., from Lasilky St.<br> Maadi, Cairo, Egypt 5th floor </p>
+                            <h5 data-aos="fade-up" data-aos-duration="1000">Get Direction</h5>
+                        </div>
+                    </div>
+                    <div class="stars mt-4" data-aos="fade-up" data-aos-duration="1000">
+                        <i class="fas fa-star yellow-star" data-aos="fade-up" data-aos-duration="1000"></i>
+                        <i class="fas fa-star yellow-star" data-aos="fade-up" data-aos-duration="1000"></i>
+                        <i class="fas fa-star yellow-star" data-aos="fade-up" data-aos-duration="1000"></i>
+                        <i class="fas fa-star yellow-star" data-aos="fade-up" data-aos-duration="1000"></i>
+                        <i class="fas fa-star yellow-star" data-aos="fade-up" data-aos-duration="1000"></i>
+                        <span class="star-rating ml-2" data-aos="fade-up" data-aos-duration="1000" style="color: #171D1C; font-weight: 600;">Rated 5/5 -<span class="normal-text"> from over 40 reviews</span></span>
+                    </div>                  
+                </div>
+            </div>
+
+            <!-- right content -->
+            <div class="col-md-6 Alahly-contact-form">
+                <div class="frame-details">
+                    <div class="frame-form">
+                        <form>
+                            <div class="frame-name mb-3">
+                                <label for="name" class="form-label" data-aos="fade-up" data-aos-duration="1000">Name</label >
+                                <input type="text" class="custom-input" id="name" placeholder="Enter your name" data-aos="fade-up" data-aos-duration="1000">
+                            </div>
+                            <div class="frame-email mb-3">
+                                <label for="email" class="form-label" data-aos="fade-up" data-aos-duration="1000">Email address</label >
+                                <input type="email" class="custom-input" id="email" placeholder="Enter your email address" data-aos="fade-up" data-aos-duration="1000">
+                            </div>
+                            <div class="frame-message mb-3">
+                                <label for="message" class="form-label" data-aos="fade-up" data-aos-duration="1000">Message</label >
+                                <textarea class="custom-input" style="height: 150px;" id="message" rows="3" placeholder="Enter your message" data-aos="fade-up" data-aos-duration="1000"></textarea data-aos="fade-up" data-aos-duration="1000">
+                            </div>
+                            <button type="submit" class="btn submit-button-contact mt-3" data-aos="fade-up" data-aos-duration="1000">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-          <div class="contact-form ">
-            <form>
-              <div class="contact-name mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-              </div>
-              <div class="contact-email mb-3">
-                <label for="email" class="form-label">Email adress</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email adress">
-              </div>
-              <div class="contact-message mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3" placeholder=" Enter your message"></textarea>
-              </div>
-              <button type="submit" class="btn submit-botton-contact">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <style>
 
-.contact-name label {
-    color: blue; 
-}
-.contact-name input::placeholder {
-    line-height: 2; 
-    font-size: 16px; 
-margin: 50px;
-}
-.contact-name input::placeholder {
-    border-radius: 5px; 
-}
 
-    #name::placeholder {
-    color: gray;
-    font-style: italic;
-    
-    
-    
-}
-    .contact-section{
-        margin-top: 10%;
-    }
-    .contact-form{
-        background-color: black;
-        padding: 40px;
-        border-radius: 30px;
-    }
-    .submit-botton-contact {
 
-  padding: 17px 33px;
-  background-color: #ffffff;
-  color: #003830;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 40px;
-  margin-top: 30px;
-  width: 100%;
-}
 
-.bot-started-gov:hover {
-  color: #5d6160;
-}
-  </style>
-  
 
 
 
 
 
       <!-- Footer section -->
-      <footer class="footer footer-errorpage" style="margin-top:15.4%;">
+      <footer class="footer " >
         <div class="container-fluid p-100">
           <div class="row footer-bot">
             <div class="footer-logo col-md-3 col-lg-2">

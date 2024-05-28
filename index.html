@@ -165,9 +165,10 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                         <p data-aos="fade-up" data-aos-duration="1000">We Make <span>Secure, Seamless & Frictionless Payments</span> An Everyday Convenience.</p>
                         <p class="recharge-bill-paragraph"data-aos="fade-up" data-aos-duration="1000">We help businesses grow their brands and attract more customers while <br> empower individuals to lead a hassle-free, time-saving and limitless state-of- <br>living through a wide range of financial platforms, products & services.</p>
                         <div class="btn-group mt-5" data-aos="fade-up" data-aos-duration="1000">
-                            <div class="btn-wrapper">
-                                <button type="button" class="btn become-partner">Become A Partner</button>
-                            </div>
+                          <div class="btn-wrapper">
+                              <button type="button" class="btn become-partner" data-bs-toggle="modal" data-bs-target="#contactFormModal">Become A Partner</button>
+                          </div>
+      
                             <div class="btn-wrapper">
                                 <button type="button" class="btn contact-us">Contact Us</button>
                             </div>
@@ -494,9 +495,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             </div>
           </div>
             <div class="col-3 fifth-img"data-aos="fade-up-right" data-aos-duration="550">
-                <svg width="139" height="97" viewBox="0 0 139 97" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M36.5984 56.8045L36.4896 56.6282L36.288 56.5806L2.01412 48.4782L137.648 1.01683L109.616 73.6197L83.9597 67.7909L83.6565 67.722L83.4606 67.9635L60.7647 95.9488L36.5984 56.8045Z" fill="#00816D" stroke="#002C15" stroke-miterlimit="10"/>
-                </svg>
+              <img src="assets/images/paper fly.png" class=""style="width: 100px; height: 100px;" alt="Small Image 4">
+
             </div>
         </div>
       </div>
@@ -705,10 +705,59 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                     
               </footer>
               
-            
-          
+       
+              
+
+<!-- Modal Trigger Button -->
+<button type="button" class="btn become-partner" data-bs-toggle="modal" data-bs-target="#contactFormModal">
+  Become A Partner
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header" style="margin-bottom: 0;">
+              <label for="subject" class="form-label mb-0">Subject</label>
+              <button type="button" class="custom-close-button" data-bs-dismiss="modal" aria-label="Close">×</button>
+          </div>
+          <div class="modal-body">
+            <div class="frame-subject">
+                <select id="subject" class="subject-dropdown">
+                    <option value="" disabled selected>Choose Subject</option>
+                    <optgroup label="Partnership Inquiry" disabled></optgroup>
+                    <option value="subject1">Job Application</option>
+                    <option value="subject2">Contact Sales</option>
+                    <option value="subject3">Get Support</option>
+                </select>
+            </div>    
+                  <div class="frame-name">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="custom-input" id="name" placeholder="Enter your name">
+                  </div>
+                  <div class="frame-email">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="email" class="custom-input" id="email" placeholder="Enter your email address">
+                  </div>
+                  <div class="frame-email">
+                      <label for="phone" class="form-label">Phone number</label>
+                      <input type="tel" class="custom-input" id="phone" placeholder="Enter your phone number">
+                  </div>
+                  <div class="frame-message">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea class="custom-input" id="message" rows="3" placeholder="Enter your message"></textarea>
+                  </div>
+                  <button type="submit" class="btn submit-button-contact mt-1">Submit</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+
     
   
+      
       
     <!-- jQuery  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
