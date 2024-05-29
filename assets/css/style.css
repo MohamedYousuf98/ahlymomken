@@ -118,6 +118,9 @@ a:hover {
 .column-three {
   margin-top: 33px;
 }
+.carrer-nav-left {
+  margin-left: 3rem;
+}
 .imaeg-dropdown {
   width: 93%;
   height: 120px;
@@ -1718,6 +1721,7 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  margin-top: 50px;
 }
 
 .governmental-header .header-image-overlay {
@@ -1728,6 +1732,15 @@ hr {
   height: 615px;
   color: rgba(0, 0, 0, 0.7);
 }
+.header-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .career-header .img-content {
   position: absolute;
   top: 50%;

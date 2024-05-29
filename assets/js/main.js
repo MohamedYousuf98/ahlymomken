@@ -100,8 +100,8 @@ $(".brands-row").slick({
     {
       breakpoint: 768,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToShow: 8,
+        slidesToScroll: 8,
       },
     },
     {
