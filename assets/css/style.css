@@ -119,7 +119,7 @@ a:hover {
   margin-top: 33px;
 }
 .carrer-nav-left {
-  margin-left: 3rem;
+  margin-left: 3rem !important;
 }
 .imaeg-dropdown {
   width: 93%;
@@ -1732,7 +1732,7 @@ hr {
   height: 615px;
   color: rgba(0, 0, 0, 0.7);
 }
-.header-image-overlay {
+.career-header .header-image-overlay {
   position: absolute;
   top: 0;
   left: 0;
