@@ -134,16 +134,19 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         </li>
         </ul>
 
-        <div class="navbar-nav">
-          <a href="contact.html" class="btn-contact d-lg-inline d-none mr-1">Contact Us</a>
-          <a class="nav-link" href="#"><i class="fas fa-search search-icon"></i></a>
-          <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN<span class="mr-1"></span></a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
-              <a class="dropdown-lang" href="#">AR</a>
-            </div>
+       
+      
+      <div class="navbar-nav">
+        <a href="contact.html" class="btn-contact d-lg-inline d-none mr-1">Contact Us</a>
+        <a class="nav-link" href="#" onclick="toggleSearch()"><i class="fas fa-search search-icon"></i></a>
+        <input type="text" class="search-input" placeholder="Search.." id="searchInput">
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN<span class="mr-1"></span></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+            <a class="dropdown-lang" href="#">AR</a>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </nav>

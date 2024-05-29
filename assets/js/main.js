@@ -174,3 +174,14 @@ function updateSelectedCategory(select) {
   document.getElementById("selectedCategory").textContent =
     selectedCategoryText;
 }
+
+// Search input
+function toggleSearch() {
+  var searchInput = document.getElementById("searchInput");
+  if (searchInput.style.display === "none") {
+    searchInput.style.display = "block";
+    searchInput.focus();
+  } else {
+    searchInput.style.display = "none";
+  }
+}
