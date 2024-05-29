@@ -3299,16 +3299,18 @@ hr {
   padding-bottom: 20px;
 }
 .payment-Einvoicing img {
-  border-radius: 30px 30px 0px 0px;
   object-fit: cover;
   width: 100%;
   height: 445px;
+  border-radius: 30px 30px 0px 0px;
 }
 
 .payment-invoicing-text {
   box-shadow: 0px 7px 12px 0px #00000014;
   padding: 30px;
-  border-radius: 30px;
+  border-radius: 0px 0px 30px 30px;
+  height: 300px;
+  overflow: hidden;
 }
 
 .payment-invoicing-text h3 {
@@ -3318,6 +3320,7 @@ hr {
   letter-spacing: -2px;
   height: 40px;
   overflow: hidden;
+  margin-bottom: 10px !important;
 }
 
 .payment-invoicing-text p {
@@ -3325,8 +3328,6 @@ hr {
   font-weight: 400;
   color: #5d6160;
   letter-spacing: -0.25px;
-  height: 80px;
-  overflow: hidden;
 }
 .payment-Einvoicing {
   padding: 0 27px;
