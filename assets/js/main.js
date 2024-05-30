@@ -179,3 +179,28 @@ function customSubmitAction() {
   // Show submit message using alert
   alert("Submitted!");
 }
+
+/**
+ * Preloader
+ */
+window.addEventListener("load", () => {
+  document.getElementById("preloader").remove();
+  document.getElementById("content").style.display = "block";
+  document.querySelector(".back-to-top").style.display = "block"; // Show back to top button
+});
+
+/**
+ * Back to top button
+ */
+let backtotop = document.querySelector(".back-to-top");
+if (backtotop) {
+  const toggleBacktotop = () => {
+    if (window.scrollY > 100) {
+      backtotop.classList.add("active");
+    } else {
+      backtotop.classList.remove("active");
+    }
+  };
+  window.addEventListener("load", toggleBacktotop);
+  window.addEventListener("scroll", toggleBacktotop);
+}

@@ -8,25 +8,82 @@ html,
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
 }
-.loader {
-  width: 48px;
-  height: 48px;
-  border: 5px solid #fff;
-  border-bottom-color: #ff3d00;
-  border-radius: 50%;
-  display: inline-block;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite;
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #00816d;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
 }
 
-@keyframes rotation {
+.back-to-top-arrow i {
+  color: #ffffff;
+}
+
+.back-to-top:hover {
+  background: #00816d;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+.back-to-top i {
+  color: #ffffff;
+  font-size: 17px;
+}
+.back-to-top:hover i {
+  color: #09dcbd;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #00816d;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 0px);
+  left: calc(50% - 30px);
+  border: 6px solid #003830;
+  border-top-color: #09dcbd;
+  border-bottom-color: #09dcbd;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@keyframes animate-preloader {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 a {
   text-decoration: none;
 }
