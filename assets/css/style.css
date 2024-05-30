@@ -1591,11 +1591,11 @@ hr {
   color: white;
 }
 .footer-logo img {
-  width: 125px;
-  height: auto;
+  width: auto;
+  height: 100px;
 }
 .footer-logo h6 {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.4;
 }
