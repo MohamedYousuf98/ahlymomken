@@ -176,6 +176,7 @@ function updateSelectedCategory(select) {
 }
 
 // Search input
+// Search input
 function toggleSearch() {
   var searchInput = document.getElementById("searchInput");
   if (searchInput.style.display === "none") {
@@ -184,4 +185,33 @@ function toggleSearch() {
   } else {
     searchInput.style.display = "none";
   }
+}
+
+// Function to handle form submission
+function submitForm(event) {
+  event.preventDefault();
+
+  customSubmitAction();
+}
+
+// Function to handle key press event
+function handleKeyPress(event) {
+  if (event.keyCode === 13) {
+    // Check if the Enter key was pressed
+    // Perform custom submit action here
+    customSubmitAction(); // Call custom action function
+  }
+}
+
+// Add event listener for key press on search input
+document
+  .getElementById("searchInput")
+  .addEventListener("keypress", handleKeyPress);
+
+// Custom submit action function
+function customSubmitAction() {
+  // For example, you can submit the form:
+  document.getElementById("searchForm").submit();
+  // Show submit message using alert
+  alert("Submitted!");
 }

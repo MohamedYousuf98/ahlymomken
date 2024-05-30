@@ -136,17 +136,19 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
        
       
-      <div class="navbar-nav">
-        <a href="contact.html" class="btn-contact d-lg-inline d-none mr-1">Contact Us</a>
-        <a class="nav-link" href="#" onclick="toggleSearch()"><i class="fas fa-search search-icon"></i></a>
-        <input type="text" class="search-input" placeholder="Search.." id="searchInput">
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN<span class="mr-1"></span></a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
-            <a class="dropdown-lang" href="#">AR</a>
+        <div class="navbar-nav">
+          <a href="contact.html" class="btn-contact d-lg-inline d-none mr-1">Contact Us</a>
+          <a class="nav-link" href="#" onclick="toggleSearch()"><i class="fas fa-search search-icon"></i></a>
+          <form id="searchForm" onsubmit="submitForm(event)">
+            <input type="text" class="search-input" placeholder="Search.." id="searchInput">
+          </form>
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN<span class="mr-1"></span></a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+              <a class="dropdown-lang" href="#">AR</a>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   </nav>
@@ -497,7 +499,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
           </div>
             <div class="col-3 fifth-img"data-aos="fade-up-right" data-aos-duration="550">
               <img src="assets/images/paper fly.png" class=""style="width: 100px; height: 100px;" alt="Small Image 4">
-
             </div>
         </div>
       </div>
@@ -615,8 +616,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
               <footer class="footer mt-5">
                 <div class="container-fluid p-100">
                   <div class="row footer-bot">
-                    <div class="footer-logo col-md-3 col-lg-2">
-                      <img src="assets/images/img-footer.png" data-aos="fade-up" data-aos-duration="500" data-aos-offset="10" alt="Logo">
+                    <div class="footer-logo col-md-3 col-lg-2 ">
+                      <img src="assets/images/footer-logo.png" data-aos="fade-up" data-aos-duration="500" data-aos-offset="10" alt="Logo">
                       <h6 data-aos="fade-up" data-aos-duration="700" data-aos-offset="10">Your Gateway to <br> Modern Banking</h6>
                       
                     </div>

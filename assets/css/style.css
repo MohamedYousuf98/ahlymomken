@@ -1589,7 +1589,6 @@ hr {
 .footer-logo img {
   width: 125px;
   height: auto;
-  margin-bottom: 20px;
 }
 .footer-logo h6 {
   font-size: 19px;
@@ -1701,14 +1700,7 @@ hr {
 .for-business-bot:hover {
   color: #ffffff;
 }
-.header-image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
+
 .governmental-header .header-image-overlay {
   position: absolute;
   top: 0;
@@ -1717,11 +1709,12 @@ hr {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
+
 .governmental-item .governmental_bg {
   position: relative;
   height: 618px;
   width: 100%;
-  background-size: cover;
+  background-size: cover !important;
 }
 .governmental_bg {
   background-size: cover !important;
@@ -1739,20 +1732,14 @@ hr {
   position: relative;
   height: 618px;
   width: 100%;
-  object-fit: cover;
-}
-.career-item .career_bg {
-  position: relative;
-  height: 620px;
-  width: 100%;
-  object-fit: cover;
+  background-size: cover;
 }
 
 .career-item .pointofsal-header_bg {
   position: relative;
   height: 620px;
   width: 100%;
-  object-fit: cover;
+  background-size: cover;
 }
 
 .governmental-header .img-content {
@@ -1769,21 +1756,21 @@ hr {
   top: 0;
   left: 0;
   width: 100%;
-  height: 615px;
+  height: 618px;
   color: rgba(0, 0, 0, 0.7);
 }
-.career-header .header-image-overlay {
+.career_header .career-image-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(54, 241, 205, 1);
 }
 
 .career-header .img-content {
   position: absolute;
-  top: 50%;
+  top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -1795,9 +1782,18 @@ hr {
   left: 0;
   width: 100%;
   height: 615px;
-  color: rgba(0, 0, 0, 0.7);
 }
 
+.career-header .header-image-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 618px;
+  background-color: #effefb;
+  opacity: 70%;
+}
 /* "Get Started" */
 .bot-started-gov {
   display: inline-block;
@@ -1946,7 +1942,7 @@ hr {
 }
 
 .gov-buttons-header {
-  margin-top: 35px;
+  margin-top: 25px;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -2974,17 +2970,22 @@ hr {
   width: 50px;
   height: auto;
 }
+
+.small-image-innerpage img {
+  width: 10vw;
+  height: auto;
+}
+.small-image-innerpage .img-small-black {
+  width: 72px;
+  height: 72px;
+}
+
 .small-image-innerpage {
   position: absolute;
-  top: 45px;
-  right: 1;
-  left: 17.5%;
+  top: 16%;
+  right: 10%;
+  left: 16.5%;
   z-index: 1;
-  padding: 20px;
-}
-.small-image-innerpage img {
-  width: 65px;
-  height: auto;
 }
 .small-image-innerpage {
   padding: 10px;
@@ -3045,18 +3046,6 @@ hr {
   object-fit: cover;
 }
 
-@media only screen and (max-width: 992px) {
-  .small-image-innerpage,
-  .img-podcast-innerpage-content,
-  .podcast-image-innerpage {
-    display: none;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .mobile-image {
-    display: none;
-  }
-}
 @media (max-width: 768px) {
   .author-details-article h5 {
     line-height: 1;
@@ -3300,7 +3289,7 @@ hr {
 }
 .governmental-header .img-content-sales {
   position: absolute;
-  top: 50%;
+  top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -3582,6 +3571,7 @@ hr {
 }
 .career-content-header {
   margin-top: 16%;
+  z-index: 1;
 }
 .career-content-header h2 {
   font-size: 58px;
@@ -3656,12 +3646,7 @@ hr {
   color: #5d6160;
   font-size: 18px;
 }
-.img-content-sales {
-  align-items: center !important;
-}
-.img-content {
-  align-items: center !important;
-}
+
 @media only screen and (max-width: 1199px) {
   .img-content-sales {
     position: relative;
@@ -3928,6 +3913,9 @@ hr {
   color: #ffffff;
   width: 100%;
   margin-top: 10px;
+}
+.career-content-vacancy {
+  z-index: 1;
 }
 .career-content-vacancy h2 {
   font-size: 35px;
