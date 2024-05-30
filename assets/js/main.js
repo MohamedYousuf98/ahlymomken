@@ -140,42 +140,6 @@ $(document).ready(function () {
   }
 });
 
-document
-  .querySelector(".page-item.next")
-  .addEventListener("click", function () {
-    var previousActive = document.querySelector(".page-item.previous.active");
-    if (previousActive) {
-      previousActive.classList.remove("active");
-    }
-
-    this.classList.add("active");
-  });
-
-document
-  .querySelector(".page-item.previous")
-  .addEventListener("click", function () {
-    var nextActive = document.querySelector(".page-item.next.active");
-    if (nextActive) {
-      nextActive.classList.remove("active");
-    }
-
-    this.classList.add("active");
-  });
-window.addEventListener("load", function () {
-  var nextElement = document.querySelector(".page-item.next");
-  if (nextElement) {
-    nextElement.click();
-  }
-});
-
-function updateSelectedCategory(select) {
-  var selectedOption = select.options[select.selectedIndex];
-  var selectedCategoryText = selectedOption.text;
-  document.getElementById("selectedCategory").textContent =
-    selectedCategoryText;
-}
-
-// Search input
 // Search input
 function toggleSearch() {
   var searchInput = document.getElementById("searchInput");
