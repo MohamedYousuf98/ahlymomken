@@ -1,3 +1,28 @@
+/**
+ * Preloader
+ */
+window.addEventListener("load", () => {
+  document.getElementById("preloader").remove();
+  document.getElementById("content").style.display = "block";
+  document.querySelector(".back-to-top").style.display = "block"; // Show back to top button
+});
+
+/**
+ * Back to top button
+ */
+let backtotop = document.querySelector(".back-to-top");
+if (backtotop) {
+  const toggleBacktotop = () => {
+    if (window.scrollY > 100) {
+      backtotop.classList.add("active");
+    } else {
+      backtotop.classList.remove("active");
+    }
+  };
+  window.addEventListener("load", toggleBacktotop);
+  window.addEventListener("scroll", toggleBacktotop);
+}
+
 //element.classList.add('selected');
 
 function changeContent(element) {
@@ -39,7 +64,7 @@ function changeContent(element) {
     rightSectionImg.src = "assets/images/sl3.png";
   }
 }
-
+/*
 $(document).ready(function () {
   $(".payment-services-slider").slick({
     dots: true,
@@ -73,70 +98,171 @@ $(document).ready(function () {
     ],
   });
 
-  $(".bill-payment-slider").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: false,
-    dots: true,
-    customPaging: function (slider, i) {
-      return '<span class="custom-dot-payment-slider"></span>';
-    },
-  });
-});
-
-$(".brands-row").slick({
-  slidesToShow: 8,
-  slidesToScroll: 1,
-  speed: 3500,
-  autoplay: true,
-  autoplaySpeed: 0,
-  cssEase: "linear",
-  arrows: false,
-  dots: false,
-  infinite: true,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 8,
-        slidesToScroll: 8,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-});
-
+*/
 $(document).ready(function () {
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    $(".explore-possible-slider").slick({
+  var direction = $("body").css("direction");
+  var screenWidth = $(window).width();
+  var isMobile = screenWidth <= 768; // تحقق مما إذا كانت الشاشة محمولة
+  var isArabic = direction === "rtl"; // التحقق مما إذا كان الاتجاه النصي هو اليمين لليسار (العربية)
+
+  var settings;
+  if (isArabic) {
+    // إذا كانت النسخة العربية
+    settings = {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 4000,
       arrows: false,
+      dots: true,
+      rtl: true,
+      customPaging: function (slider, i) {
+        if (!isMobile) {
+          return '<span class="custom-dot-payment-slider"></span>';
+        }
+      },
+    };
+  } else {
+    settings = {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      arrows: false,
+      dots: true,
+      customPaging: function (slider, i) {
+        return '<span class="custom-dot-payment-slider"></span>';
+      },
+    };
+  }
+
+  $(".bill-payment-slider").slick(settings);
+});
+
+// brands section
+$(document).ready(function () {
+  var direction = $("body").css("direction");
+
+  var settings;
+  if (direction === "rtl") {
+    settings = {
+      slidesToShow: 8,
+      slidesToScroll: 1,
+      speed: 3500,
+      autoplay: true,
+      autoplaySpeed: 0,
+      cssEase: "linear",
+      arrows: false,
       dots: false,
-    });
+      infinite: true,
+      rtl: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 8,
+            slidesToScroll: 8,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
+  } else {
+    settings = {
+      slidesToShow: 8,
+      slidesToScroll: 1,
+      speed: 3500,
+      autoplay: true,
+      autoplaySpeed: 0,
+      cssEase: "linear",
+      arrows: false,
+      dots: false,
+      infinite: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 8,
+            slidesToScroll: 8,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
+  }
+
+  $(".brands-row").slick(settings);
+});
+
+$(document).ready(function () {
+  var direction = $("body").css("direction");
+
+  var settings;
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    if (direction === "rtl") {
+      settings = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false,
+        dots: false,
+        rtl: true,
+      };
+    } else {
+      settings = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false,
+        dots: false,
+      };
+    }
+    $(".explore-possible-slider").slick(settings);
   }
 });
 
 $(document).ready(function () {
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    $(".careers-slider").slick({
+  var direction = $("body").css("direction");
+
+  var settings;
+  if (direction === "rtl") {
+    settings = {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 4000,
       arrows: false,
       dots: false,
-    });
+      rtl: true,
+    };
+  } else {
+    settings = {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      arrows: false,
+      dots: false,
+      rtl: false,
+    };
+  }
+
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    $(".careers-slider").slick(settings);
   }
 });
 
@@ -178,29 +304,4 @@ function customSubmitAction() {
   document.getElementById("searchForm").submit();
   // Show submit message using alert
   alert("Submitted!");
-}
-
-/**
- * Preloader
- */
-window.addEventListener("load", () => {
-  document.getElementById("preloader").remove();
-  document.getElementById("content").style.display = "block";
-  document.querySelector(".back-to-top").style.display = "block"; // Show back to top button
-});
-
-/**
- * Back to top button
- */
-let backtotop = document.querySelector(".back-to-top");
-if (backtotop) {
-  const toggleBacktotop = () => {
-    if (window.scrollY > 100) {
-      backtotop.classList.add("active");
-    } else {
-      backtotop.classList.remove("active");
-    }
-  };
-  window.addEventListener("load", toggleBacktotop);
-  window.addEventListener("scroll", toggleBacktotop);
 }
