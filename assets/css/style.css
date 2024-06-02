@@ -470,10 +470,10 @@ a:hover {
   margin-right: 10px;
 }
 .recharge-bill-left {
-  margin-top: 2.4% !important;
+  padding-top: 2.4% !important;
 }
 .recharge-bill-right-img {
-  margin-top: 12% !important;
+  padding-top: 12% !important;
 }
 .fa-star {
   color: rgba(253, 182, 21, 1);
@@ -1354,6 +1354,7 @@ border-radius: 50%;
   position: relative;
   top: 60%;
   left: 20%;
+  right: 5px;
   transform: translate(-35%, -110%);
   z-index: 0 !important;
   margin-top: 30px;
@@ -1363,6 +1364,7 @@ border-radius: 50%;
   left: -220px;
   z-index: 0 !important;
   top: 90%;
+  right: 80px;
 }
 
 .second-img {
@@ -2272,7 +2274,7 @@ hr {
 /* About page */
 
 .left-titles {
-  margin-top: 23%;
+  padding-top: 23%;
 }
 .our-story-text,
 .our-values-text,
@@ -2293,7 +2295,7 @@ hr {
 }
 
 .our-story-content {
-  margin-top: 15%;
+  padding-top: 15%;
   line-height: 2.1;
 }
 .our-story-content p {
@@ -2423,7 +2425,7 @@ hr {
 }
 @media screen and (max-width: 767px) {
   .left-titles {
-    margin-top: 35%;
+    padding-top: 35%;
   }
 
   .our-story-text,
@@ -2510,7 +2512,7 @@ hr {
 }
 
 .media-news {
-  margin-top: 15%;
+  padding-top: 15%;
 }
 .email-input {
   margin-bottom: 15px;
@@ -2670,6 +2672,7 @@ hr {
 .author-image {
   border-radius: 50%;
   height: 50px;
+  width: 50px;
   margin-top: 15px;
   object-fit: cover;
   display: flex;
@@ -2693,6 +2696,7 @@ hr {
 .author-details-icon {
   display: inline-block;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .author-details-icon i {
@@ -2708,6 +2712,8 @@ hr {
 
 .author-details {
   flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .author-details-icon .fa-angle-right {
@@ -2790,6 +2796,10 @@ hr {
   color: #000000;
 }
 
+.page-item.next a:focus .fa-arrow-right {
+  color: #000000;
+}
+
 .page-item.previous a .pagination-word-left,
 .page-item.next a .pagination-word-right {
   color: gray;
@@ -2804,15 +2814,8 @@ hr {
 .page-item.next a:active .fa-arrow-right {
   color: #000000;
 }
-
-.page-item.previous:hover a .pagination-word-left,
-.page-item.next:hover a .pagination-word-right {
-  color: #000000;
-}
-
-.page-item.previous:hover a .fa-arrow-left,
-.page-item.next:hover a .fa-arrow-right {
-  color: #000000;
+.page-item.previous.disabled a {
+  pointer-events: none !important;
 }
 
 .page-item.active .number {
@@ -2873,7 +2876,7 @@ hr {
     height: auto;
   }
   .media-news {
-    margin-top: 32%;
+    padding-top: 32%;
   }
   .box-news h2 {
     font-size: 13px;
@@ -2905,7 +2908,7 @@ hr {
   margin-top: 4.5%;
 }
 .article-header {
-  margin-top: 24%;
+  padding-top: 24%;
 }
 
 .header-title {
@@ -3274,7 +3277,7 @@ hr {
   }
 
   .article-header {
-    margin-top: 60%;
+    padding-top: 60%;
   }
   .news-insight-text {
     font-size: 17px;
@@ -3315,7 +3318,7 @@ hr {
   font-size: 42px;
   font-weight: 700;
   color: #5d6160;
-  margin-top: 35%;
+  padding-top: 35%;
 }
 .simple-payment-title h2 {
   font-size: 24px;
@@ -3643,6 +3646,8 @@ hr {
   font-size: 16px;
   font-weight: 500;
   color: #5d6160;
+  height: 20px;
+  overflow: hidden;
 }
 .senior-level-icon .career-icon {
   width: 30px;
@@ -3754,7 +3759,7 @@ hr {
   margin-bottom: 20px;
 }
 .career-content-header {
-  margin-top: 16%;
+  padding-top: 16%;
   z-index: 1;
 }
 .career-content-header h2 {

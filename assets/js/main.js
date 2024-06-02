@@ -102,8 +102,8 @@ $(document).ready(function () {
 $(document).ready(function () {
   var direction = $("body").css("direction");
   var screenWidth = $(window).width();
-  var isMobile = screenWidth <= 768; // تحقق مما إذا كانت الشاشة محمولة
-  var isArabic = direction === "rtl"; // التحقق مما إذا كان الاتجاه النصي هو اليمين لليسار (العربية)
+  var isMobile = screenWidth <= 768;
+  var isArabic = direction === "rtl";
 
   var settings;
   if (isArabic) {
