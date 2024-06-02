@@ -147,7 +147,7 @@ $(document).ready(function () {
   if (direction === "rtl") {
     settings = {
       slidesToShow: 8,
-      slidesToScroll: 1,
+      slidesToScroll: 8,
       speed: 3500,
       autoplay: true,
       autoplaySpeed: 0,
@@ -176,7 +176,7 @@ $(document).ready(function () {
   } else {
     settings = {
       slidesToShow: 8,
-      slidesToScroll: 1,
+      slidesToScroll: 8,
       speed: 3500,
       autoplay: true,
       autoplaySpeed: 0,
