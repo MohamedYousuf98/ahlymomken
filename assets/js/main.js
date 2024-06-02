@@ -54,16 +54,8 @@ function changeContent(element) {
   });
 
   element.classList.add("selected");
-
-  const rightSectionImg = document.querySelector(".momken-pay-img");
-  if (element.classList.contains("word-left")) {
-    rightSectionImg.src = "assets/images/8a372abcb0f93a90b420760fcf4de367.jpeg";
-  } else if (element.classList.contains("word-center")) {
-    rightSectionImg.src = "assets/images/sl1.png";
-  } else if (element.classList.contains("word-right")) {
-    rightSectionImg.src = "assets/images/sl3.png";
-  }
 }
+
 /*
 $(document).ready(function () {
   $(".payment-services-slider").slick({
@@ -107,7 +99,6 @@ $(document).ready(function () {
 
   var settings;
   if (isArabic) {
-    // إذا كانت النسخة العربية
     settings = {
       slidesToShow: 1,
       slidesToScroll: 1,
