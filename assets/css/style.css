@@ -1371,6 +1371,7 @@ border-radius: 50%;
   left: 95px;
   top: 70%;
   z-index: 0 !important;
+  right: -320px;
 }
 
 .third-img {
@@ -1378,7 +1379,7 @@ border-radius: 50%;
   top: 80%;
   left: -1000%;
   transform: translate(50%, 50%);
-  right: 20px;
+  right: 180px;
   z-index: 0 !important;
 }
 .fourth-img {
@@ -1386,6 +1387,7 @@ border-radius: 50%;
   bottom: 90%;
   transform: translate(20%, 60%);
   left: 100px;
+  right: -220px;
   z-index: 0 !important;
 }
 .fifth-img {
@@ -1393,6 +1395,7 @@ border-radius: 50%;
   margin-top: 30px !important;
   transform: translateY(50%);
   left: 70px;
+  right: 105px;
   z-index: 0 !important;
   margin-bottom: 60px;
 }
