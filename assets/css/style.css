@@ -164,9 +164,6 @@ a:hover {
   transition: width 0.3s ease;
 }
 
-.search-input:focus {
-  width: 200px;
-}
 .navbar-brand img {
   max-height: 70px;
 }
