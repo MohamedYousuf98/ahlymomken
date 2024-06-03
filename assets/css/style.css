@@ -3964,7 +3964,7 @@ hr {
 }
 .category-dropdown option:focus {
   outline: none;
-  background-color: #ebfefa !;
+  background-color: #ebfefa;
 }
 .categories-word .category-dropdown {
   position: absolute;
