@@ -2681,6 +2681,7 @@ hr {
 .author-image-article {
   border-radius: 50%;
   height: 50px;
+  width: 50px;
   margin-top: 15px;
   object-fit: cover;
   display: flex;
@@ -3708,6 +3709,15 @@ hr {
   border-right: 1px solid rgba(230, 230, 232, 1);
 }
 
+.border-left-ltr {
+  position: absolute;
+  top: 40px;
+  left: -8px;
+  height: 190px;
+  margin-left: 10px;
+  border-left: 1px solid rgba(230, 230, 232, 1);
+}
+
 .verticle-line-career {
   border: 1px solid rgba(230, 230, 232, 1);
   width: 345px;
@@ -3956,17 +3966,18 @@ hr {
   outline: none;
   background-color: #ebfefa !;
 }
-.category-dropdown {
+.categories-word .category-dropdown {
   position: absolute;
   background-color: #ebfefa;
   list-style: none;
   padding: 7px;
   display: none;
   margin-top: 10px;
-  width: 435px;
   overflow: hidden;
   z-index: 9999;
+  width: 435px;
 }
+
 .category-dropdown:focus {
   border: none;
   background-color: none;

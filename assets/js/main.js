@@ -23,6 +23,13 @@ if (backtotop) {
   window.addEventListener("scroll", toggleBacktotop);
 }
 
+// All Categories
+function updateSelectedCategory(select) {
+  var selectedCategorySpan = document.getElementById("selectedCategory");
+  var selectedIndex = select.selectedIndex;
+  var selectedOption = select.options[selectedIndex];
+  selectedCategorySpan.textContent = selectedOption.textContent;
+}
 //element.classList.add('selected');
 
 function changeContent(element) {
@@ -99,6 +106,7 @@ $(document).ready(function () {
   });
 
 */
+
 $(document).ready(function () {
   var direction = $("body").css("direction");
   var screenWidth = $(window).width();
@@ -146,15 +154,16 @@ $(document).ready(function () {
   if (direction === "rtl") {
     settings = {
       slidesToShow: 8,
-      slidesToScroll: 7,
+      slidesToScroll: 1,
       speed: 3500,
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 0,
       cssEase: "linear",
       arrows: false,
       dots: false,
       infinite: true,
       rtl: true,
+      pauseOnHover: true,
       responsive: [
         {
           breakpoint: 768,
@@ -175,14 +184,14 @@ $(document).ready(function () {
   } else {
     settings = {
       slidesToShow: 8,
-      slidesToScroll: 7,
+      slidesToScroll: 1,
       speed: 3500,
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 0,
       cssEase: "linear",
       arrows: false,
       dots: false,
-
+      pauseOnHover: true,
       responsive: [
         {
           breakpoint: 768,
