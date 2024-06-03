@@ -146,12 +146,12 @@ a:hover {
 .dropdown-menu {
   display: none;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   opacity: 1;
 }
 
@@ -417,6 +417,10 @@ a:hover {
   width: 55px;
   opacity: 1;
 }
+.content-left .number-description {
+  margin-bottom: 40px;
+}
+
 @media (max-width: 576px) {
   .slick-dots .custom-dot-payment-slider {
     left: -20px;
@@ -774,12 +778,12 @@ a:hover {
 .left-content .number-description {
   color: #003830;
   opacity: 80%;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .content-left {
-  margin-bottom: 40px;
+  margin-bottom: 55px;
 }
 .recharge-bill {
   margin-top: 8%;
@@ -3976,7 +3980,7 @@ hr {
   margin-top: 10px;
   overflow: hidden;
   z-index: 9999;
-  width: 435px;
+  width: 28.5%;
 }
 
 .category-dropdown:focus {
