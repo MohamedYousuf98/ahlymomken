@@ -146,10 +146,10 @@ $(document).ready(function () {
   if (direction === "rtl") {
     settings = {
       slidesToShow: 8,
-      slidesToScroll: 8,
+      slidesToScroll: 7,
       speed: 3500,
       autoplay: true,
-      autoplaySpeed: 0,
+      autoplaySpeed: 1000,
       cssEase: "linear",
       arrows: false,
       dots: false,
@@ -175,14 +175,14 @@ $(document).ready(function () {
   } else {
     settings = {
       slidesToShow: 8,
-      slidesToScroll: 8,
+      slidesToScroll: 7,
       speed: 3500,
       autoplay: true,
-      autoplaySpeed: 0,
+      autoplaySpeed: 1000,
       cssEase: "linear",
       arrows: false,
       dots: false,
-      infinite: true,
+
       responsive: [
         {
           breakpoint: 768,
@@ -266,6 +266,65 @@ $(document).ready(function () {
 });
 
 // Search input
+/*function toggleSearch() {
+  var searchInput = document.getElementById("searchInput");
+  if (searchInput.style.display === "none") {
+    searchInput.style.display = "block";
+    searchInput.focus();
+  } else {
+    searchInput.style.display = "none";
+  }
+}
+
+// Function to handle form submission
+function submitForm(event) {
+  event.preventDefault();
+
+  customSubmitAction();
+}
+
+// Function to handle key press event
+function handleKeyPress(event) {
+  if (event.keyCode === 13) {
+    // Check if the Enter key was pressed
+    // Perform custom submit action here
+    customSubmitAction(); // Call custom action function
+  }
+}
+
+// Add event listener for key press on search input
+document
+  .getElementById("searchInput")
+  .addEventListener("keypress", handleKeyPress);
+
+// Custom submit action function
+function customSubmitAction() {
+  // For example, you can submit the form:
+  document.getElementById("searchForm").submit();
+}
+
+/*
+// Function to toggle search input visibility
+function toggleSearch() {
+  var searchInput = document.getElementById("searchInput");
+  if (
+    searchInput.style.display === "none" ||
+    searchInput.style.display === ""
+  ) {
+    searchInput.style.display = "block";
+    searchInput.focus();
+  } else {
+    searchInput.style.display = "none";
+  }
+}
+
+// Add click event listener to search icon
+document.getElementById("searchIcon").addEventListener("click", toggleSearch);
+*/
+
+/*
+// Search input without hover
+// Function to toggle search input visibility
 function toggleSearch() {
   var searchInput = document.getElementById("searchInput");
   if (searchInput.style.display === "none") {
@@ -301,6 +360,81 @@ document
 function customSubmitAction() {
   // For example, you can submit the form:
   document.getElementById("searchForm").submit();
-  // Show submit message using alert
-  alert("Submitted!");
 }
+
+// Function to toggle search input visibility
+function toggleSearch() {
+  var searchInput = document.getElementById("searchInput");
+  if (
+    searchInput.style.display === "none" ||
+    searchInput.style.display === ""
+  ) {
+    searchInput.style.display = "block";
+    searchInput.focus();
+  } else {
+    searchInput.style.display = "none";
+  }
+}
+
+// Add click event listener to search icon
+document.getElementById("searchIcon").addEventListener("click", toggleSearch);
+*/
+
+// Search input with hover
+// Function to toggle search input visibility
+function toggleSearch() {
+  var searchInput = document.getElementById("searchInput");
+  if (
+    searchInput.style.display === "none" ||
+    searchInput.style.display === ""
+  ) {
+    searchInput.style.display = "block";
+    searchInput.focus();
+  } else {
+    searchInput.style.display = "none";
+  }
+}
+
+// Function to handle form submission
+function submitForm(event) {
+  event.preventDefault(); // Prevent default form submission behavior
+  //alert("Form Submitted!"); Show an alert to indicate that the form is submitted
+  // You can add additional logic here to handle form submission
+}
+
+// Function to handle click event anywhere on the document
+function handleDocumentClick(event) {
+  var searchInput = document.getElementById("searchInput");
+  var searchIcon = document.querySelector(".search-icon");
+
+  // Check if clicked element is not the search input or search icon
+  if (event.target !== searchInput && event.target !== searchIcon) {
+    searchInput.style.display = "none";
+  }
+}
+
+// Add mouse enter event listener to search icon (optional, for hover effect)
+document
+  .querySelector(".search-icon")
+  .addEventListener("mouseenter", function () {
+    var searchInput = document.getElementById("searchInput");
+    searchInput.style.display = "block";
+    searchInput.focus();
+  });
+
+// Add event listener for key press on search input
+document
+  .getElementById("searchInput")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      // Check if the Enter key was pressed
+      // Perform custom submit action here
+      submitForm(event);
+    }
+  });
+
+// Add click event listener to search icon (can be removed if not needed)
+document.querySelector(".search-icon").addEventListener("click", toggleSearch);
+
+// Add click event listener to the entire document (for hiding search input)
+document.addEventListener("click", handleDocumentClick);

@@ -143,29 +143,42 @@ a:hover {
   padding-left: 160px !important;
   padding-right: 160px !important;
 }
-.search-icon {
-  font-size: 20px;
-  transition: transform 0.5s ease;
-  cursor: pointer;
-}
-#searchInput {
+.dropdown-menu {
   display: none;
-  transition: display 0.5s ease-in-out;
-}
-.search-icon:hover {
-  transform: scale(1.2);
-  color: #00816d;
-  transition: width 0.5s ease;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.search-input {
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.search-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+#searchInput {
   display: none;
   padding: 8px 15px;
   border: 2px solid #00816d;
   border-radius: 20px;
   font-size: 16px;
   outline: none;
-  transition: width 0.5s ease;
+  transition: display 0.5s ease-in-out;
+}
+
+.search-icon:hover + #searchInput,
+#searchInput:hover {
+  display: block !important;
+}
+
+.search-icon:hover {
+  transform: scale(1.2);
+  color: #00816d;
 }
 
 .navbar-brand img {
@@ -277,6 +290,7 @@ a:hover {
 .dropdown-lang:hover {
   text-decoration: underline;
 }
+
 @media (max-width: 768px) {
   .nav-item.dropdown .dropdown-menu {
     width: 95%;
@@ -1676,7 +1690,7 @@ hr {
 }
 .footer-logo img {
   width: auto;
-  height: 100px;
+  height: 95px;
 }
 .footer-logo h6 {
   font-size: 18px;

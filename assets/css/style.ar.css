@@ -1,3 +1,18 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+* {
+  font-family: "Almarai", sans-serif;
+}
+
 .almarai-light {
   font-family: "Almarai", sans-serif;
   font-weight: 300;
@@ -82,4 +97,10 @@ body :lang(ar) {
 }
 .listen-now-link {
   margin-right: 10px;
+}
+.consumer-features .list-unstyled.column-two li {
+  margin-right: 18px;
+}
+.column-one .fa-caret-right {
+  margin-left: 1px;
 }
