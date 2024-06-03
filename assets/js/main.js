@@ -155,15 +155,13 @@ $(document).ready(function () {
     settings = {
       slidesToShow: 8,
       slidesToScroll: 1,
-      speed: 3500,
       autoplay: true,
-      autoplaySpeed: 0,
+      autoplaySpeed: 3000,
       cssEase: "linear",
+      infinite: true,
       arrows: false,
       dots: false,
-      infinite: true,
       rtl: true,
-      pauseOnHover: true,
       responsive: [
         {
           breakpoint: 768,
@@ -185,13 +183,12 @@ $(document).ready(function () {
     settings = {
       slidesToShow: 8,
       slidesToScroll: 1,
-      speed: 3500,
       autoplay: true,
-      autoplaySpeed: 0,
+      autoplaySpeed: 3000,
       cssEase: "linear",
+      infinite: true,
       arrows: false,
       dots: false,
-      pauseOnHover: true,
       responsive: [
         {
           breakpoint: 768,
