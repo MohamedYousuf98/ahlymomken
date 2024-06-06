@@ -3293,7 +3293,7 @@ hr {
   }
 }
 .bg-data-driven {
-  width: 283px;
+  width: 273px;
   height: 283px;
   background-size: cover;
   border-radius: 30px;
@@ -4271,7 +4271,7 @@ hr {
   border-top: 1px solid var(--Dim-white, #f4f4f6);
 }
 .category-dropdown .options:hover {
-  background-color: #00816d;
+  background-color: #00816d !important;
   color: #ffffff;
 }
 .category-dropdown:focus {
@@ -4392,7 +4392,21 @@ hr {
     margin-top: 1% !important;
   }
   .category-dropdown {
-    width: fit-content;
+    width: 28.9% !important;
+    position: absolute;
+    background-color: #ebfefa;
+    padding: 7px;
+    display: none;
+    margin-top: 10px;
+    overflow: hidden;
+    font-size: 12px;
+  }
+  .category-dropdown .options:hover {
+    background-color: #00816d !important;
+    color: #ffffff;
+  }
+  .category-dropdown option {
+    font-size: 9px;
   }
 }
 
