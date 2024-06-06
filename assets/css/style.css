@@ -273,7 +273,6 @@ body {
 .offcanvas-header {
   background-color: #00816d;
   color: white;
- 
 }
 .offcanvas-header:hover {
   background-color: #00816d;
@@ -3446,10 +3445,15 @@ hr {
   color: #ffffff;
   text-transform: uppercase;
   line-height: 0.5;
+  white-space: nowrap;
 }
 .img-podcast-innerpage-content h4 {
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 500;
+  width: 240px !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .podcast-image {
   border-radius: 30px;
