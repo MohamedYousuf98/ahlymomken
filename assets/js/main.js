@@ -348,7 +348,7 @@ function submitForm(event) {
   customSubmitAction();
 }
 
-// Function to handle key press event
+ Function to handle key press event
 function handleKeyPress(event) {
   if (event.keyCode === 13) {
     // Check if the Enter key was pressed
@@ -401,11 +401,8 @@ function toggleSearch() {
   }
 }
 
-// Function to handle form submission
-function submitForm(event) {
-  event.preventDefault(); // Prevent default form submission behavior
-  //alert("Form Submitted!"); Show an alert to indicate that the form is submitted
-  // You can add additional logic here to handle form submission
+function submitForm(element) {
+  element.submit();
 }
 
 // Function to handle click event anywhere on the document
