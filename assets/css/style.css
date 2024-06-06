@@ -3514,6 +3514,12 @@ hr {
   .img-podcast-magazine-content {
     flex-direction: column;
     align-items: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 0.5;
+    white-space: nowrap;
+    width: 330px !important;
+    overflow: hidden;
   }
   .img-podcast-innerpage-content {
     margin-top: 20px;
