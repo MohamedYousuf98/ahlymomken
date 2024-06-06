@@ -2321,6 +2321,9 @@ hr {
   }
 }
 @media (max-width: 767px) {
+  .developedby p {
+    font-size: 8px;
+  }
   .grow-your-presence {
     display: none;
   }
@@ -4269,6 +4272,7 @@ hr {
   width: 28.6%;
   border: 1px solid #00816d;
   border-top: 1px solid var(--Dim-white, #f4f4f6);
+  border-radius: 0px 0px 10px 10px;
 }
 .category-dropdown .options:hover {
   background-color: #00816d !important;

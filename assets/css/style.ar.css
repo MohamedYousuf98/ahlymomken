@@ -66,8 +66,11 @@ span {
   margin-right: 10px;
 }
 .consumer-features .list-unstyled.column-two li {
-  margin-right: 39px;
+  padding-right: 50px;
 }
 .column-one .fa-caret-right {
   margin-left: 1px;
+}
+.navbar-brand {
+  float: left;
 }
