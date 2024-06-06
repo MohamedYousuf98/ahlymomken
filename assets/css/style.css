@@ -420,11 +420,11 @@ a:hover {
 }
 .consumer-features .news-item {
   padding-left: 33px;
-  padding-right: 35px;
+  margin-right: 52px !important;
 }
 .consumer-features .product-magazine {
   padding-left: 33px;
-  padding-right: 33px;
+  padding-right: 46px !important;
 }
 .consumer-features .list-unstyled a {
   color: #000000;
