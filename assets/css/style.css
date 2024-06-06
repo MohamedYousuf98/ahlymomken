@@ -3327,10 +3327,16 @@ hr {
   color: #ffffff;
   text-transform: uppercase;
   line-height: 0.5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .img-podcast-magazine-content h4 {
   font-size: 48px;
   font-weight: 500;
+  width: 240px !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .podcast-imgs {
   height: 643px;
