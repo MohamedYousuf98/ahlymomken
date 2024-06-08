@@ -74,3 +74,6 @@ span {
 .navbar-brand {
   float: left;
 }
+.pagination-word-left .left {
+  float: right !important;
+}

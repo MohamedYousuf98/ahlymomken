@@ -2123,7 +2123,7 @@ hr {
 }
 
 .bot-started-gov:hover {
-  color: #5d6160;
+  color: #000000b5;
 }
 
 /*  "Contact Us" */
@@ -2142,9 +2142,8 @@ hr {
 }
 
 .contact-us-gov:hover {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
-
 /* Governmental headers */
 
 .get-startgov-btn {
@@ -2535,7 +2534,7 @@ hr {
   color: #5d6160;
 }
 .green-text {
-  color: #00816d;
+  color: #00816d !important;
   font-weight: 700;
   font-size: 18px;
 }
@@ -3000,6 +2999,22 @@ hr {
 
 .pagination .page-item {
   margin: 0 5px;
+}
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination-container[dir="rtl"] .pagination {
+  flex-direction: row-reverse;
+}
+
+.pagination-container[dir="rtl"] .pagination .page-item {
+  float: none;
+}
+
+.pagination-container[dir="rtl"] .pagination .page-item a {
+  padding: 5px 10px;
 }
 
 .pagination .number {
@@ -4140,9 +4155,11 @@ hr {
   font-weight: 500;
   font-size: 17px;
   text-align: center !important;
+  outline: none;
 }
 .search-word:hover {
   color: #003830;
+  font-weight: 550;
 }
 
 .search-words-career {
@@ -4162,14 +4179,14 @@ hr {
 }
 @media only screen and (max-width: 767px) {
   .governmental-header .img-content-sales {
-    top: 12%;
+    top: 18%;
     left: 50%;
     transform: translateX(-50%);
   }
 }
 @media screen and (max-width: 767px) {
   .governmental-header .img-content-sales {
-    top: 12%;
+    top: 18%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -4272,7 +4289,7 @@ hr {
   width: 28.6%;
   border: 1px solid #00816d;
   border-top: 1px solid var(--Dim-white, #f4f4f6);
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 8px 8px;
 }
 .category-dropdown .options:hover {
   background-color: #00816d !important;
@@ -4400,6 +4417,7 @@ hr {
     position: absolute;
     background-color: #ebfefa;
     padding: 7px;
+    padding-left: 2px !important;
     display: none;
     margin-top: 10px;
     overflow: hidden;
