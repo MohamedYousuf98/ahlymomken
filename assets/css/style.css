@@ -2953,6 +2953,12 @@ hr {
   font-size: 20px;
   margin-right: 10px;
 }
+.author-details-icon .fa-angle-left {
+  color: #ffffff;
+  padding: 10px 14px;
+  font-size: 20px;
+  margin-right: 10px;
+}
 .last-news-imgs {
   margin-top: 45px;
 }
