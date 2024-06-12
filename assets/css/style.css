@@ -717,7 +717,7 @@ a:hover {
   margin-right: 10px;
 }
 .recharge-bill-left {
-  padding-top: 20% !important;
+  padding-top: 16% !important;
   margin-bottom: 97px;
 }
 .recharge-bill-right-img {
@@ -4137,7 +4137,9 @@ hr {
   padding: 6px 10px;
   font-size: 18px;
 }
-
+.author-details-icon .arrow-right-news {
+  border-radius: 50%;
+}
 .sales-dev-body .fa-angle-right {
   color: #ffffff;
   background-color: #00816d;

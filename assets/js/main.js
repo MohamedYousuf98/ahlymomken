@@ -107,6 +107,7 @@ $(document).ready(function () {
 
 */
 
+// Recharge / Bill Payment Slider
 $(document).ready(function () {
   var direction = $("body").css("direction");
   var screenWidth = $(window).width();

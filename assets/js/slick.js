@@ -2975,14 +2975,3 @@
     return _;
   };
 });
-
-$(document).ready(function () {
-  $(".bill-payment-slider").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: false,
-    dots: true,
-  });
-});
