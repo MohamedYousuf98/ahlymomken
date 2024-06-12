@@ -77,3 +77,6 @@ span {
 .pagination-word-left .left {
   float: right !important;
 }
+.recharge-bill-left {
+  margin-right: 25px;
+}
