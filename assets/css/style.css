@@ -4112,6 +4112,32 @@ hr {
   align-items: center;
 }
 
+.author-details-icon .fa-angle-left {
+  color: #ffffff;
+  padding: 10px 14px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.author-details-icon .fa-angle-left {
+  color: #ffffff;
+  padding: 6px 10px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.author-details-icon .fa-angle-left {
+  color: #ffffff;
+  padding: 7px 8px;
+  font-size: 24px;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.author-details-icon .fa-angle-left {
+  color: #ffffff;
+  padding: 6px 10px;
+  font-size: 18px;
+}
+
 .author-details-icon .fa-angle-right {
   color: #ffffff;
   padding: 10px 14px;
