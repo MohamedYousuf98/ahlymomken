@@ -598,7 +598,7 @@ a:hover {
     overflow: hidden !important;
     max-height: 70px;
     text-overflow: ellipsis !important;
-    margin-bottom: 3px !important;
+    margin-bottom: 10px !important;
   }
 }
 @media (min-width: 768px) {
@@ -622,7 +622,7 @@ a:hover {
     overflow: hidden !important;
     max-height: 70px;
     text-overflow: ellipsis !important;
-    margin-bottom: 3px !important;
+    margin-bottom: 15px !important;
   }
 }
 .recharge-bill-left h2 {
@@ -683,7 +683,7 @@ a:hover {
   left: -575px;
 }
 .recharge-bill-left {
-  padding-bottom: 13% !important;
+  margin-bottom: 14% !important;
 }
 
 .custom-dot-payment-slider {
