@@ -570,24 +570,55 @@ a:hover {
 .consumer-features .list-unstyled.column-two {
   white-space: nowrap;
 }
-
+@media (max-width: 767px) {
+  .recharge-bill-left h2 {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    max-height: 60px !important;
+    white-space: nowrap !important;
+  }
+  .recharge-bill-left-subtitle p {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    max-height: 55px !important;
+    white-space: nowrap !important;
+  }
+  .recharge-bill-paragraph p {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    max-height: 145px !important;
+  }
+  .recharge-bill-paragraph br {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .recharge-bill-left h2,
+  .recharge-bill-paragraph p {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    max-height: 65px !important;
+    white-space: nowrap !important;
+  }
+  .recharge-bill-left-subtitle p {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    max-height: 70px !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+  }
+}
 .recharge-bill-left h2 {
   font-size: 50px;
   font-weight: 700;
   color: #00816d;
-  height: 65px;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
-.recharge-bill-left p {
+.recharge-bill-left-subtitle p {
   font-size: 24px;
   font-weight: 500;
   color: #5d6160;
   margin-top: 25px;
-  height: 65px;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .recharge-bill-left span {
@@ -596,13 +627,10 @@ a:hover {
   color: #171d1c;
 }
 
-.recharge-bill-left .recharge-bill-paragraph {
+.recharge-bill-paragraph p {
   color: #5d6160;
   font-size: 15px;
   font-weight: 500;
-  height: 65px;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 .btn-group {
   margin-bottom: 20px;
