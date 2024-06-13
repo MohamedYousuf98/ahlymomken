@@ -577,10 +577,7 @@ a:hover {
     max-height: 60px !important;
     white-space: nowrap !important;
   }
-  .recharge-bill-left-subtitle p {
-    text-overflow: ellipsis !important;
-    overflow: hidden !important;
-  }
+
   .recharge-bill-paragraph p {
     text-overflow: ellipsis !important;
     overflow: hidden !important;
@@ -589,12 +586,23 @@ a:hover {
   .recharge-bill-paragraph br {
     display: none !important;
   }
+  .recharge-bill-paragraph {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    max-height: 100px !important;
+  }
+  .recharge-bill-left-subtitle p {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    max-height: 70px;
+    text-overflow: ellipsis !important;
+  }
 }
 @media (min-width: 768px) {
   .recharge-bill-paragraph {
     text-overflow: ellipsis !important;
     overflow: hidden !important;
-    max-height: 145px !important;
+    max-height: 100px !important;
     white-space: nowrap !important;
   }
   .recharge-bill-left h2,
@@ -607,9 +615,8 @@ a:hover {
   .recharge-bill-left-subtitle p {
     text-overflow: ellipsis !important;
     overflow: hidden !important;
-    max-height: 70px !important;
+    max-height: 70px;
     text-overflow: ellipsis !important;
-    overflow: hidden !important;
   }
 }
 .recharge-bill-left h2 {
