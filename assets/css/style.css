@@ -574,7 +574,7 @@ a:hover {
   .recharge-bill-left h2 {
     text-overflow: ellipsis !important;
     overflow: hidden !important;
-    max-height: 60px !important;
+    max-height: 67px !important;
     white-space: nowrap !important;
     margin-bottom: 10px;
   }
