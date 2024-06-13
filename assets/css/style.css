@@ -575,6 +575,9 @@ a:hover {
   font-size: 50px;
   font-weight: 700;
   color: #00816d;
+  height: 65px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .recharge-bill-left p {
@@ -582,6 +585,9 @@ a:hover {
   font-weight: 500;
   color: #5d6160;
   margin-top: 25px;
+  height: 65px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .recharge-bill-left span {
@@ -594,6 +600,9 @@ a:hover {
   color: #5d6160;
   font-size: 15px;
   font-weight: 500;
+  height: 65px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .btn-group {
   margin-bottom: 20px;
@@ -629,7 +638,7 @@ a:hover {
 .slick-dots .custom-dot-payment-slider {
   position: absolute;
   bottom: 25px;
-  right: 575px;
+  left: -575px;
 }
 
 .custom-dot-payment-slider {
@@ -718,7 +727,8 @@ a:hover {
 }
 .recharge-bill-left {
   padding-top: 16% !important;
-  margin-bottom: 97px;
+  margin-bottom: 130px;
+  height: 500px;
 }
 .recharge-bill-right-img {
   padding-top: 12% !important;

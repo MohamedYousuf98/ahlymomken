@@ -39,7 +39,9 @@ span {
 #selectedCategory {
   margin-left: 8px;
 }
-
+.slick-dots .custom-dot-payment-slider {
+  right: -570px;
+}
 .btn-group .get-started {
   margin-left: 10px;
 }
