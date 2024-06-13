@@ -2516,7 +2516,7 @@ hr {
 
 .grow-img {
   left: calc(100% - 538px);
-  right: calc(100% - 330px);
+  right: calc(100% - 300px);
   z-index: 1;
   width: calc(100% - 420px);
   height: 160px;
@@ -2526,7 +2526,7 @@ hr {
 }
 
 .receive-img {
-  right: calc(100% - 270px);
+  right: calc(100% - 246px);
   left: calc(100% - 660px);
   top: calc(100% - -40px);
   z-index: 1;
