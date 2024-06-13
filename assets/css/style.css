@@ -580,8 +580,6 @@ a:hover {
   .recharge-bill-left-subtitle p {
     text-overflow: ellipsis !important;
     overflow: hidden !important;
-    max-height: 65px !important;
-    white-space: nowrap !important;
   }
   .recharge-bill-paragraph p {
     text-overflow: ellipsis !important;
@@ -671,10 +669,12 @@ a:hover {
 }
 .slick-dots .custom-dot-payment-slider {
   position: absolute;
-  bottom: 25px;
+  bottom: -15px;
   left: -575px;
 }
-
+.recharge-bill {
+  margin-bottom: 12% !important;
+}
 .custom-dot-payment-slider {
   width: 25px;
   height: 8px;
@@ -761,8 +761,6 @@ a:hover {
 }
 .recharge-bill-left {
   padding-top: 16% !important;
-  margin-bottom: 130px;
-  height: 500px;
 }
 .recharge-bill-right-img {
   padding-top: 12% !important;
