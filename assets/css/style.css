@@ -589,7 +589,7 @@ a:hover {
   .recharge-bill-paragraph {
     text-overflow: ellipsis !important;
     overflow: hidden !important;
-    max-height: 100px !important;
+    max-height: 95px !important;
   }
   .recharge-bill-left-subtitle p {
     text-overflow: ellipsis !important;
@@ -633,8 +633,6 @@ a:hover {
 
 .recharge-bill-left span {
   font-size: 24px;
-  font-weight: 700;
-  color: #171d1c;
 }
 
 .recharge-bill-paragraph p {
