@@ -679,8 +679,11 @@ a:hover {
   bottom: -15px;
   left: -575px;
 }
+.recharge-bill-left {
+  margin-bottom: 10% !important;
+}
 .recharge-bill {
-  margin-bottom: 12% !important;
+  margin-bottom: 12.5% !important;
 }
 .custom-dot-payment-slider {
   width: 25px;
