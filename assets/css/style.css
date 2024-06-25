@@ -686,11 +686,11 @@ a:hover {
 }
 .slick-dots .custom-dot-payment-slider {
   position: absolute;
-
   left: -575px;
+  bottom: 70px;
 }
 .recharge-bill-left {
-  margin-bottom: 15% !important;
+  height: 660px !important;
 }
 
 .custom-dot-payment-slider {
@@ -720,7 +720,7 @@ a:hover {
 
 @media (min-width: 576px) and (max-width: 992px) {
   .slick-dots .custom-dot-payment-slider {
-    top: 30px;
+    top: 150px;
     display: flex;
     justify-content: left;
     align-items: left;
@@ -1384,10 +1384,7 @@ border-radius: 50%;
   color: #5d6160;
 }
 @media (max-width: 768px) {
-  .main-image img {
-    width: 100%;
-  }
-
+  .large-image,
   .first-img,
   .second-img,
   .third-img,
@@ -1396,6 +1393,7 @@ border-radius: 50%;
     display: none;
   }
 }
+
 @media only screen and (max-width: 768px) {
   .col-md-4.payment-services-section {
     width: 50%;
@@ -1551,6 +1549,9 @@ border-radius: 50%;
 
     height: 430px;
     margin: 30px;
+  }
+  .animation-mobile-only {
+    display: none;
   }
 }
 
@@ -1723,6 +1724,7 @@ border-radius: 50%;
 .pl-130 {
   padding-left: 130px;
 }
+
 @media (max-width: 576px) {
   .main-image {
     display: flex;
@@ -1735,6 +1737,73 @@ border-radius: 50%;
     width: 100%;
     max-width: 400px;
     padding-left: 25px;
+  }
+  .recharge-bill-left {
+    height: 450px !important;
+  }
+  .small-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0 !important;
+  }
+
+  .first-img-mobile {
+    position: relative;
+    left: -100px !important;
+    z-index: 0 !important;
+    top: 30%;
+    right: 175px;
+    transform: translate(50%, 50%);
+  }
+
+  .second-img-mobile {
+    position: relative;
+    left: 85px !important;
+    top: -20%;
+    z-index: 0 !important;
+    right: -80px;
+    transform: translate(50%, 50%);
+  }
+
+  .third-img-mobile {
+    position: relative;
+    top: 80%;
+    left: -850%;
+    transform: translate(50%, 50%);
+    right: 190px;
+    z-index: 0 !important;
+  }
+  .fourth-img-mobile {
+    position: relative;
+    bottom: 90%;
+    transform: translate(20%, 60%);
+    left: 135px;
+    right: -65px;
+    z-index: 0 !important;
+  }
+  .fifth-img-mobile {
+    position: relative;
+    margin-top: 40px !important;
+    transform: translateY(50%);
+    left: 120px;
+    right: 125px;
+    z-index: 0 !important;
+    margin-bottom: 60px;
+  }
+  .main-image-mobile {
+    position: relative;
+    z-index: 2 !important;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .main-image-mobile img {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 170px;
   }
 }
 /* ready-talk-online */
@@ -2493,8 +2562,6 @@ hr {
 }
 
 .grow-your-presence {
-  padding-right: 10px;
-  padding-left: 10px;
   padding-top: 20px !important;
 }
 
