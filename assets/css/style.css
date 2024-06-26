@@ -641,7 +641,14 @@ a:hover {
 .recharge-bill-left-subtitle p {
   font-size: 24px;
   font-weight: 500;
-  color: #5d6160;
+}
+.recharge-bill-left-subtitle span {
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+}
+.recharge-bill-left-subtitle {
+  font-size: 24px;
 }
 
 .recharge-bill-left span {
@@ -2305,11 +2312,11 @@ hr {
   background-color: #00816d;
   color: #ffffff;
   border-radius: 64px;
-  padding: 17px 28px;
+  padding: 15px 25px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -3819,7 +3826,7 @@ hr {
 .momkn-soluton-title h2 {
   font-size: 42px;
   font-weight: 700;
-  color: #5d6160;
+  color: #00816d;
   padding-top: 35%;
 }
 .simple-payment-title h2 {
@@ -3887,20 +3894,25 @@ hr {
 }
 
 .payment-invoicing-text h3 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 500;
   color: #002c15;
   letter-spacing: -2px;
   height: 40px;
   overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 10px !important;
 }
 
 .payment-invoicing-text p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #5d6160;
   letter-spacing: -0.25px;
+  height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-wrap: nowrap;
 }
 .payment-Einvoicing {
   padding: 0 27px;
