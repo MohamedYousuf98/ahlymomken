@@ -654,6 +654,20 @@ a:hover {
 .recharge-bill-left span {
   font-size: 24px;
 }
+.consumer-service-img {
+  perspective: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+.flip-image {
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.consumer-service-img:hover .flip-image {
+  transform: rotateY(180deg);
+}
 
 .recharge-bill-paragraph p {
   color: #5d6160;
