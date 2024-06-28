@@ -3917,6 +3917,10 @@ hr {
   color: #002c15;
   letter-spacing: -2px;
   margin-bottom: 10px !important;
+  height: 40px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .payment-invoicing-text p {
@@ -3926,7 +3930,7 @@ hr {
   letter-spacing: -0.25px;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex-wrap: nowrap;
+  max-height: 95px;
 }
 .payment-Einvoicing {
   padding: 0 27px;
