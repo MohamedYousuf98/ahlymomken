@@ -865,13 +865,6 @@ document.getElementById('searchInput').addEventListener('input', async function 
     }
 });
 
-// Call the initialization functions on page load
-document.addEventListener('DOMContentLoaded', function () {
-    initializeDropdowns();
-    initMap();
-    initializePage();
-});
-
 async function initializePage() {
     try {
         const language = document.dir === 'rtl' ? 'ar' : 'en';
@@ -937,7 +930,12 @@ function initializeDropdowns() {
     });
 }
 
-
+// Call the initialization functions on page load
+document.addEventListener('DOMContentLoaded', function () {
+    initializeDropdowns();
+    initMap();
+    initializePage();
+});
 
 
 
