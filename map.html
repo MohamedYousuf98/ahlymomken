@@ -353,15 +353,15 @@
 
 
 <script>
-
 let map;
- let markers = [];
- let locations = []; 
- let cities = [];
+let markers = [];
+let locations = [];
+let cities = [];
 let categories = [];
-  
-   
-   // Select Api 
+let userLatitude;
+let userLongitude;
+
+// Select Api 
 
 // Function to fetch data from API
 function initMap() {
@@ -370,25 +370,48 @@ function initMap() {
         zoom: 10, // Default zoom level
     });
 
-    // Function to fetch data from API
-    async function fetchData() {
-    try {
-        const response = await fetch('http://ec2-18-185-90-36.eu-central-1.compute.amazonaws.com/api/city', {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
-        const data = await response.json();
-        allLocations = data.data.locations; 
-        return data.data; // Return only the 'data' part of the response
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        return null;
+   // Function to calculate the distance between two coordinates using the Haversine formula
+function calculateDistance(lat1, lng1, lat2, lng2) {
+    const R = 6371; // Radius of the Earth in km
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLng = (lng2 - lng1) * Math.PI / 180;
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLng / 2) * Math.sin(dLng / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const distance = R * c; // Distance in km
+    return distance.toFixed(2); // Return distance with two decimal places
+}
+
+
+ // Function to handle geolocation
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("Geolocation is not supported by this browser.");
     }
 }
 
-  
+// Function to show user's position
+function showPosition(position) {
+    userLatitude = position.coords.latitude;
+    userLongitude = position.coords.longitude;
+    searchLocations();
+    initializePage(); // Initialize the page after getting the user's location
+}
+
+// Initialize map and get user's location
+document.addEventListener('DOMContentLoaded', () => {
+    getLocation();
+    document.getElementById('citySelect').addEventListener('change', searchLocations);
+    document.getElementById('areaSelect').addEventListener('change', searchLocations);
+    document.getElementById('categorySelect').addEventListener('change', searchLocations);
+    document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
+});
+
+
+    
       // Observer for dynamically adding new location items
       const observer = new MutationObserver(function(mutations) {
           mutations.forEach(function(mutation) {
@@ -411,11 +434,13 @@ function initMap() {
         const selectedCity = this.value;
         const areas = getAreasForCity(selectedCity);
         populateAreaDropdown(areas);
+        getLocation();
         searchLocations(); // Trigger search when city changes
     });
 
     // Event listener for area select changes
     document.getElementById('areaSelect').addEventListener('change', function() {
+      getLocation();
         searchLocations(); // Trigger search when area changes
     });
 
@@ -423,6 +448,24 @@ function initMap() {
     adjustMapBounds();
 
 
+    async function fetchData() {
+        try {
+            const response = await fetch('http://ec2-18-185-90-36.eu-central-1.compute.amazonaws.com/api/city', {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            });
+            const data = await response.json();
+            locations = data.data.locations;
+            cities = data.data.cities;
+            categories = data.data.categories;
+            return data.data;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            return null;
+        }
+    }
 
 // Function to populate cities dropdown based on page language
 function populateCitiesDropdown(cities, language) {
@@ -489,7 +532,7 @@ async function initializePage() {
 
         // Set default placeholders for areas and categories dropdowns
         populateAreasDropdown([], routeLanguage);
-
+      
      
     // Event listener for city select changes
 document.getElementById('citySelect').addEventListener('change', async function() {
@@ -504,20 +547,22 @@ document.getElementById('citySelect').addEventListener('change', async function(
 });
 
 
-        // Initialize with areas for the first city by default
-        const defaultCity = data.cities[0]; // or any other default city selection logic
-        populateAreasDropdown(defaultCity ? defaultCity.areas : [], routeLanguage);
+      
     }
+      searchLocations();
 }
 
 // Call initializePage function when the page loads
 // Initialize page
-document.addEventListener('DOMContentLoaded', () => {
-    initializePage();
+document.addEventListener('DOMContentLoaded', async () => {
+    await getLocation();
     document.getElementById('citySelect').addEventListener('change', searchLocations);
     document.getElementById('areaSelect').addEventListener('change', searchLocations);
     document.getElementById('categorySelect').addEventListener('change', searchLocations);
     document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
+
+
+    searchLocations();
 });
 
 
@@ -614,31 +659,33 @@ function populateAreaDropdown(areas) {
     displayLocations(filteredLocations);
     addMarkersFromList(filteredLocations);
     adjustMapBounds();
+ 
 }
 
 
 // Function to perform location filtering based on search criteria
 async function searchLocations() {
-    const searchTerm = document.getElementById('searchInputmaps').value.toLowerCase();
-    const cityId = document.getElementById('citySelect').value;
-    const areaId = document.getElementById('areaSelect').value;
-    const categoryId = document.getElementById('categorySelect').value;
+  const searchTerm = document.getElementById('searchInputmaps').value.toLowerCase();
+  const cityId = document.getElementById('citySelect').value;
+  const areaId = document.getElementById('areaSelect').value;
+  const categoryId = document.getElementById('categorySelect').value;
 
-    // Fetch locations from API
-    const response = await fetch('http://ec2-18-185-90-36.eu-central-1.compute.amazonaws.com/api/location?lat=30.0074528&lng=31.4075971&search&category_id&city_id&area_id');
-    const res_data = await response.json();
-    const locations = res_data.data.locations;
-    const language = document.dir === 'rtl' ? 'ar' : 'en';
-    // Filter locations based on search criteria
-    const filteredLocations = locations.filter(location => {
-        const titleMatch = location.name_en.toLowerCase().includes(searchTerm);
-        const cityMatch = !cityId || location.city_id === cityId;
-        const areaMatch = !areaId || location.area_id === areaId;
-        const categoryMatch = !categoryId || location.category_id === categoryId;
-        return titleMatch && cityMatch && areaMatch && categoryMatch;
-    });
-    displayLocations(filteredLocations ,language); // Display filtered locations
+  const response = await fetch(`http://ec2-18-185-90-36.eu-central-1.compute.amazonaws.com/api/location?lat=${userLatitude}&lng=${userLongitude}&search=${searchTerm}&category_id=${categoryId}&city_id=${cityId}&area_id=${areaId}`);
+  const res_data = await response.json();
+  const locations = res_data.data.locations;
+  const language = document.dir === 'rtl' ? 'ar' : 'en';
+
+  const filteredLocations = locations.filter(location => {
+    const titleMatch = location.name_en.toLowerCase().includes(searchTerm);
+    const cityMatch = !cityId || location.city_id === cityId;
+    const areaMatch = !areaId || location.area_id === areaId;
+    const categoryMatch = !categoryId || location.category_id === categoryId;
+    return titleMatch && cityMatch && areaMatch && categoryMatch;
+  });
+  displayLocations(filteredLocations, language);
 }
+
+document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
 
 // Event listener for the search input field
 document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
@@ -736,26 +783,6 @@ populateLocations();
 
 
 
-
-// Function to fetch location data from API based on latitude and longitude
-async function fetchLocationData(lat, lng, language, searchQuery = '') {
-    const apiUrl = `http://ec2-18-185-90-36.eu-central-1.compute.amazonaws.com/api/location?lat=${lat}&lng=${lng}&search=${searchQuery}&category_id&city_id&area_id&lang=${language}`;
-    const headers = {
-        'Content-Type': 'application/json',
-    };
-
-    try {
-        const response = await fetch(apiUrl, { headers });
-        if (!response.ok) {
-            throw new Error('Failed to fetch location data');
-        }
-        const data = await response.json();
-        return data.data.locations;
-    } catch (error) {
-        console.error('Error fetching location data:', error);
-        return null;
-    }
-}
 
 
 // Function to create location item HTML
@@ -865,20 +892,6 @@ document.getElementById('searchInput').addEventListener('input', async function 
     }
 });
 
-async function initializePage() {
-    try {
-        const language = document.dir === 'rtl' ? 'ar' : 'en';
-        const lat = 30.0444;
-        const lng = 31.2357;
-        const locations = await fetchLocationData(lat, lng, language);
-
-        if (locations) {
-            displayLocations(locations, language);
-        }
-    } catch (error) {
-        console.error('Error initializing page:', error);
-    }
-}
 
 function displayLocations(locations, language) {
     renderLocationItems(locations, language);
@@ -887,6 +900,7 @@ function displayLocations(locations, language) {
 
 
 function renderLocationItems(locations, language) {
+  
     const locationsContainer = document.getElementById('locations');
     if (!locationsContainer) return;
 
