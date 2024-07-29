@@ -370,18 +370,6 @@ function initMap() {
         zoom: 10, // Default zoom level
     });
 
-   // Function to calculate the distance between two coordinates using the Haversine formula
-function calculateDistance(lat1, lng1, lat2, lng2) {
-    const R = 6371; // Radius of the Earth in km
-    const dLat = (lat2 - lat1) * Math.PI / 180;
-    const dLng = (lng2 - lng1) * Math.PI / 180;
-    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-              Math.sin(dLng / 2) * Math.sin(dLng / 2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    const distance = R * c; // Distance in km
-    return distance.toFixed(2); // Return distance with two decimal places
-}
 
 
  // Function to handle geolocation
@@ -408,6 +396,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('areaSelect').addEventListener('change', searchLocations);
     document.getElementById('categorySelect').addEventListener('change', searchLocations);
     document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
+
+    searchLocations();
+
 });
 
 
@@ -434,14 +425,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedCity = this.value;
         const areas = getAreasForCity(selectedCity);
         populateAreaDropdown(areas);
-        getLocation();
-        searchLocations(); // Trigger search when city changes
+     
+     
     });
 
     // Event listener for area select changes
     document.getElementById('areaSelect').addEventListener('change', function() {
-      getLocation();
-        searchLocations(); // Trigger search when area changes
+ 
+    
     });
 
     // Adjust map bounds initially
@@ -549,7 +540,7 @@ document.getElementById('citySelect').addEventListener('change', async function(
 
       
     }
-      searchLocations();
+     
 }
 
 // Call initializePage function when the page loads
@@ -561,8 +552,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('categorySelect').addEventListener('change', searchLocations);
     document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
 
-
-    searchLocations();
 });
 
 
@@ -625,7 +614,7 @@ document.getElementById('citySelect').addEventListener('change', async function(
     } else {
         document.getElementById('areaSelect').disabled = true;
     }
-    searchLocations(); // Trigger search when city changes
+    
 });
 
 
@@ -636,8 +625,7 @@ function populateAreaDropdown(areas) {
     areaSelect.innerHTML = ''; // Clear previous options
 
    
-    // Trigger search after populating the dropdown
-    searchLocations();
+  
 }
   }
 
@@ -685,7 +673,6 @@ async function searchLocations() {
   displayLocations(filteredLocations, language);
 }
 
-document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
 
 // Event listener for the search input field
 document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
