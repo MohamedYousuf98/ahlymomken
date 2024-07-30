@@ -353,6 +353,7 @@
 
 
 <script>
+  
 let map;
 let markers = [];
 let locations = [];
@@ -362,7 +363,24 @@ let userLatitude;
 let userLongitude;
 
 // Select Api 
-
+async function fetchData() {
+        try {
+            const response = await fetch('http://ec2-18-185-90-36.eu-central-1.compute.amazonaws.com/api/city', {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            });
+            const data = await response.json();
+            locations = data.data.locations;
+            cities = data.data.cities;
+            categories = data.data.categories;
+            return data.data;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            return null;
+        }
+    }
 // Function to fetch data from API
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
@@ -371,25 +389,53 @@ function initMap() {
     });
 
 
-
- // Function to handle geolocation
-function getLocation() {
+    function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition((position) => {
+            userLatitude = position.coords.latitude;
+            userLongitude = position.coords.longitude;
+            searchLocations();
+        }, showError);
     } else {
-        alert("Geolocation is not supported by this browser.");
+        console.log("Geolocation is not supported by this browser.");
+        userLatitude = null;
+        userLongitude = null;
+        searchLocations();
     }
+}
+
+function showError(error) {
+    switch (error.code) {
+        case error.PERMISSION_DENIED:
+            console.log("User denied the request for Geolocation.");
+            break;
+        case error.POSITION_UNAVAILABLE:
+            console.log("Location information is unavailable.");
+            break;
+        case error.TIMEOUT:
+            console.log("The request to get user location timed out.");
+            break;
+        case error.UNKNOWN_ERROR:
+            console.log("An unknown error occurred.");
+            break;
+    }
+  // On location retrieval error, set userLatitude and userLongitude to null
+userLatitude = null;
+userLongitude = null;
+searchLocations();
 }
 
 // Function to show user's position
 function showPosition(position) {
-    userLatitude = position.coords.latitude;
-    userLongitude = position.coords.longitude;
+    userLatitude = position.coords.latitude === undefined ? null : position.coords.latitude;
+    userLongitude = position.coords.longitude === undefined ? null  : position.coords.longitude;
     searchLocations();
-    initializePage(); // Initialize the page after getting the user's location
+  
 }
 
-// Initialize map and get user's location
+
+// Call initializePage function when the page loads
+// Initialize page
 document.addEventListener('DOMContentLoaded', () => {
     getLocation();
     document.getElementById('citySelect').addEventListener('change', searchLocations);
@@ -397,12 +443,48 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('categorySelect').addEventListener('change', searchLocations);
     document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
 
-    searchLocations();
-
+    initializePage(); 
 });
 
 
-    
+// Function to perform location filtering based on search criteria
+async function searchLocations() {
+    const searchTerm = document.getElementById('searchInputmaps').value.toLowerCase();
+    const cityId = document.getElementById('citySelect').value;
+    const areaId = document.getElementById('areaSelect').value;
+    const categoryId = document.getElementById('categorySelect').value;
+
+    const url = `http://ec2-18-185-90-36.eu-central-1.compute.amazonaws.com/api/location?lat=${userLatitude}&lng=${userLongitude}&search=${searchTerm}&category_id=${categoryId}&city_id=${cityId}&area_id=${areaId}`;
+
+    const response = await fetch(url);
+    const res_data = await response.json();
+    const locations = res_data.data.locations;
+
+    const language = document.dir === 'rtl' ? 'ar' : 'en';
+
+    const filteredLocations = locations.filter(location => {
+        const titleMatch = location.name_en.toLowerCase().includes(searchTerm);
+        const cityMatch = !cityId || location.city_id === cityId;
+        const areaMatch = !areaId || location.area_id === areaId;
+        const categoryMatch = !categoryId || location.category_id === categoryId;
+        return titleMatch && cityMatch && areaMatch && categoryMatch;
+    });
+
+// Use recorded data from the API directly
+filteredLocations.forEach(location => {
+    if (userLatitude === null || userLongitude === null) {
+        location.distance = null;
+    } else {
+        // Preserve distance from the API as is
+        location.distance = location.distance || null;
+    }
+});
+
+
+    displayLocations(filteredLocations, language);
+}
+
+ 
       // Observer for dynamically adding new location items
       const observer = new MutationObserver(function(mutations) {
           mutations.forEach(function(mutation) {
@@ -431,32 +513,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener for area select changes
     document.getElementById('areaSelect').addEventListener('change', function() {
- 
     
     });
 
-    // Adjust map bounds initially
-    adjustMapBounds();
-
-
-    async function fetchData() {
-        try {
-            const response = await fetch('http://ec2-18-185-90-36.eu-central-1.compute.amazonaws.com/api/city', {
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            });
-            const data = await response.json();
-            locations = data.data.locations;
-            cities = data.data.cities;
-            categories = data.data.categories;
-            return data.data;
-        } catch (error) {
-            console.error('Error fetching data:', error);
-            return null;
-        }
-    }
 
 // Function to populate cities dropdown based on page language
 function populateCitiesDropdown(cities, language) {
@@ -499,6 +558,11 @@ function populateCategoriesDropdown(categories, language) {
     });
 }
 
+
+// Event listener for the search input field
+document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
+
+
 // Example function to determine route language based on page dir
 function determineRouteLanguage() {
     const pageDir = document.dir.toLowerCase(); // Get page dir and convert to lowercase
@@ -536,23 +600,10 @@ document.getElementById('citySelect').addEventListener('change', async function(
         document.getElementById('areaSelect').disabled = true; // Disable areas dropdown if no city is selected
     }
 });
-
-
-      
-    }
      
+    }
+    
 }
-
-// Call initializePage function when the page loads
-// Initialize page
-document.addEventListener('DOMContentLoaded', async () => {
-    await getLocation();
-    document.getElementById('citySelect').addEventListener('change', searchLocations);
-    document.getElementById('areaSelect').addEventListener('change', searchLocations);
-    document.getElementById('categorySelect').addEventListener('change', searchLocations);
-    document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
-
-});
 
 
   // Function to highlight a location on the map
@@ -617,67 +668,12 @@ document.getElementById('citySelect').addEventListener('change', async function(
     
 });
 
-
-
 // Function to populate area dropdown based on areas array
 function populateAreaDropdown(areas) {
     const areaSelect = document.getElementById('areaSelect');
     areaSelect.innerHTML = ''; // Clear previous options
-
-   
-  
 }
   }
-
-  function updateDisplayedLocations() {
-    const selectedCity = document.getElementById('citySelect').value;
-    const selectedArea = document.getElementById('areaSelect').value;
-    const selectedCategory = document.getElementById('categorySelect').value;
-    const searchTerm = document.getElementById('searchInputmaps').value.toLowerCase();
-
-    const filteredLocations = locations.filter(location => {
-        const matchesCity = selectedCity === "" || location.city_id === selectedCity;
-        const matchesArea = selectedArea === "" || location.area_id === selectedArea;
-        const matchesCategory = selectedCategory === "" || location.category_id === selectedCategory;
-        const matchesSearchTerm = searchTerm === "" || location.title.toLowerCase().includes(searchTerm);
-
-        return matchesCity && matchesArea && matchesCategory && matchesSearchTerm;
-    });
-
-    displayLocations(filteredLocations);
-    addMarkersFromList(filteredLocations);
-    adjustMapBounds();
- 
-}
-
-
-// Function to perform location filtering based on search criteria
-async function searchLocations() {
-  const searchTerm = document.getElementById('searchInputmaps').value.toLowerCase();
-  const cityId = document.getElementById('citySelect').value;
-  const areaId = document.getElementById('areaSelect').value;
-  const categoryId = document.getElementById('categorySelect').value;
-
-  const response = await fetch(`http://ec2-18-185-90-36.eu-central-1.compute.amazonaws.com/api/location?lat=${userLatitude}&lng=${userLongitude}&search=${searchTerm}&category_id=${categoryId}&city_id=${cityId}&area_id=${areaId}`);
-  const res_data = await response.json();
-  const locations = res_data.data.locations;
-  const language = document.dir === 'rtl' ? 'ar' : 'en';
-
-  const filteredLocations = locations.filter(location => {
-    const titleMatch = location.name_en.toLowerCase().includes(searchTerm);
-    const cityMatch = !cityId || location.city_id === cityId;
-    const areaMatch = !areaId || location.area_id === areaId;
-    const categoryMatch = !categoryId || location.category_id === categoryId;
-    return titleMatch && cityMatch && areaMatch && categoryMatch;
-  });
-  displayLocations(filteredLocations, language);
-}
-
-
-// Event listener for the search input field
-document.getElementById('searchInputmaps').addEventListener('input', searchLocations);
-
-
 
 
 // Function to display locations in the list
@@ -714,62 +710,19 @@ function displayLocations(locations) {
         locationMeta.appendChild(locationText);
 
         const distance = document.createElement('span');
-        distance.classList.add('location-distance', );
+        distance.classList.add('location-distance');
         distance.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m9.706 12.781l-5.316-.953a2.085 2.085 0 0 1-.167-3.96l14.11-4.992a2.084 2.084 0 0 1 2.673 2.673l-4.992 14.386a2.084 2.084 0 0 1-3.91-.098l-.914-5.572a2.015 2.015 0 0 0-1.484-1.484m5.571-3.979l-4.579 4.579"/>
             </svg>
-            ${location.distance}
+            ${location.distance} km
         `;
         locationMeta.appendChild(distance);
-
-        const indications = document.createElement('span');
-        indications.classList.add('location-indications');
-        indications.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.852 5.68c-.678-.827-1.018-1.24-1.48-1.46C14.907 4 14.377 4 13.318 4H8c-.943 0-1.414 0-1.707.293S6 5.057 6 6v3c0 .943 0 1.414.293 1.707S7.057 11 8 11h5.319c1.059 0 1.589 0 2.052-.22s.803-.633 1.48-1.46l.27-.326C17.706 8.28 18 7.922 18 7.5s-.293-.78-.88-1.494zM10 11v10m0-18v1M6 21h8" color="currentColor"/>
-            </svg>
-            ${location.indications}
-        `;
-        locationMeta.appendChild(indications);
 
         locationDiv.appendChild(locationMeta);
         locationsContainer.appendChild(locationDiv);
     });
-
-    // Attach click event listeners to dynamic location items
-    document.querySelectorAll('.location-item').forEach(item => {
-        item.addEventListener('click', clickHandler);
-    });
-
-  
-  // Function to populate location items based on API data
-const populateLocations = function () {
-    const locationsContainer = document.getElementById('locationsContainer');
-    locationsContainer.innerHTML = ''; // Clear previous items
-
-    locations.forEach(location => {
-        const item = document.createElement('div');
-        item.classList.add('location-item');
-        item.setAttribute('data-lat', location.lat);
-        item.setAttribute('data-lng', location.lng);
-        item.setAttribute('data-title', location.name_en); // Use appropriate data for title
-        item.textContent = location.name_en; // Or use any appropriate text
-        locationsContainer.appendChild(item);
-    });
-};
-
-// Call the function to populate locations initially
-populateLocations();
-
 }
-
-
-
-// ----------------------------------- location api -------------------------------//
-
-
-
 
 
 // Function to create location item HTML
@@ -917,30 +870,10 @@ function renderLocationItems(locations, language) {
     adjustMapBounds(map, markers); // Adjust map bounds after adding markers
 }
 
-// Initialize dropdowns and other components when the page loads
-function initializeDropdowns() {
-    const dropdownElements = document.querySelectorAll('.dropdown-toggle');
-    dropdownElements.forEach(dropdown => {
-        dropdown.addEventListener('click', function (e) {
-            e.preventDefault();
-            const menu = this.nextElementSibling;
-            if (menu) {
-                menu.classList.toggle('show');
-            }
-        });
-    });
-}
-
-// Call the initialization functions on page load
-document.addEventListener('DOMContentLoaded', function () {
-    initializeDropdowns();
-    initMap();
-    initializePage();
-});
-
-
-
 </Script>
+
+
+
 
 
 

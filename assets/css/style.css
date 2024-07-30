@@ -5374,8 +5374,8 @@ hr {
 
 .info-window img {
   margin-right: 10px;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -5559,7 +5559,9 @@ hr {
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-
+  .form-control-maps {
+    font-size: 11px;
+  }
   .location-info::-webkit-scrollbar {
     display: none;
   }
@@ -5567,7 +5569,7 @@ hr {
     padding-right: 0px;
   }
   .location-text h5 {
-    width: 100px;
+    width: 150px;
     font-size: 16px;
     font-weight: 550;
     color: #00816d;
