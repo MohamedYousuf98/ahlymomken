@@ -58,7 +58,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -204,7 +204,7 @@ p {
 .personal-img .btn:disabled {
   display: none;
 }
-.personal-img .upload-btn-wrapper input[type=file] {
+.personal-img .upload-btn-wrapper input[type="file"] {
   font-size: 100px;
   position: absolute;
   left: 0;
@@ -802,7 +802,11 @@ p {
 }
 .header::after {
   content: "";
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(78, 78, 78, 0));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(78, 78, 78, 0)
+  );
 }
 .header .card-img {
   display: flex;
@@ -1018,8 +1022,8 @@ p {
   padding-bottom: 15px;
   min-width: 250px;
   border-radius: 6px;
-  background-color: #60BA46;
-  border: 1px solid #60BA46;
+  background-color: #60ba46;
+  border: 1px solid #60ba46;
 }
 .easy-to-learn .easy-btn a img {
   margin-left: 5px;
@@ -1029,8 +1033,8 @@ p {
   color: #fff;
 }
 .easy-to-learn .easy-btn .btn-login {
-  background-color: #009DDE;
-  border-color: #009DDE;
+  background-color: #009dde;
+  border-color: #009dde;
 }
 .easy-to-learn .easy-btn .btn-login:hover {
   background-color: #009bdea9;
@@ -1038,7 +1042,7 @@ p {
 }
 
 .body-color {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
 }
 
 /* ================================================================ */
@@ -1049,7 +1053,7 @@ p {
 }
 .most-courses-subsription::after {
   content: "";
-  background-color: #212C81;
+  background-color: #212c81;
   opacity: 0.97;
 }
 .most-courses-subsription .head {
@@ -1092,7 +1096,7 @@ p {
 }
 .most-courses-subsription .slick-dots li button::before {
   width: 10px;
-  background-color: #C2C2C2;
+  background-color: #c2c2c2;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -1110,7 +1114,7 @@ p {
 }
 .most-courses-subsription .slick-dots li.slick-active button:before {
   border-radius: 50%;
-  background-color: #60BA46;
+  background-color: #60ba46;
 }
 
 /* ================================================================ */
@@ -1131,7 +1135,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #BA466D;
+  background-color: #ba466d;
   padding: 8px 10px;
   color: #fff;
   font-size: 0.9rem;
@@ -1159,7 +1163,7 @@ p {
   background-color: rgba(33, 44, 129, 0.191);
   padding: 5px;
   border-radius: 5px;
-  color: #212C81;
+  color: #212c81;
   font-family: sukarbo;
   font-size: 0.9rem;
 }
@@ -1174,17 +1178,17 @@ p {
   -webkit-line-clamp: 2 !important;
 }
 .course-card .card-body .option h6 i {
-  color: #60BA46;
+  color: #60ba46;
 }
 .course-card .card-body .option h6 span {
-  color: #9F9F9F;
+  color: #9f9f9f;
   font-family: sukarbl;
   font-size: 0.9rem;
 }
 .course-card .card-body .option .addcart a {
   width: 36px;
   height: 36px;
-  background-color: #60BA46;
+  background-color: #60ba46;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1221,7 +1225,7 @@ p {
   padding-top: 118px;
 }
 .live-courses .live-content {
-  background-color: #009CDD;
+  background-color: #009cdd;
   border-radius: 17px;
   padding: 32px 60px;
   position: relative;
@@ -1287,11 +1291,11 @@ p {
 }
 .discount-courses::after {
   content: "";
-  background-color: #FFF0DC;
+  background-color: #fff0dc;
   opacity: 0.97;
 }
 .discount-courses .discount-courses-wraper {
-  background-color: #202E3B;
+  background-color: #202e3b;
   border-radius: 17px;
   padding: 18px;
   padding-bottom: 90px;
@@ -1333,7 +1337,7 @@ p {
 }
 .discount-courses .slick-dots li button::before {
   width: 10px;
-  background-color: #C2C2C2;
+  background-color: #c2c2c2;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -1351,7 +1355,7 @@ p {
 }
 .discount-courses .slick-dots li.slick-active button:before {
   border-radius: 50%;
-  background-color: #60BA46;
+  background-color: #60ba46;
 }
 
 /* ================================================================ */
@@ -1417,7 +1421,7 @@ p {
 }
 .watch_now_section::after {
   content: "";
-  background-color: #60BA46;
+  background-color: #60ba46;
   opacity: 0.97;
 }
 .watch_now_section .head {
@@ -1469,7 +1473,13 @@ p {
 .watch_now_section .watch_now_cards .big_watch .card_body .date_option > div {
   width: 50%;
 }
-.watch_now_section .watch_now_cards .big_watch .card_body .date_option > div span {
+.watch_now_section
+  .watch_now_cards
+  .big_watch
+  .card_body
+  .date_option
+  > div
+  span {
   color: #fff;
   font-size: 0.8rem;
 }
@@ -1519,7 +1529,10 @@ p {
   width: 100%;
   background-color: #212c81;
 }
-.watch_now_section .watch_now_cards .watch_video_scrollable .mCSB_draggerContainer:before {
+.watch_now_section
+  .watch_now_cards
+  .watch_video_scrollable
+  .mCSB_draggerContainer:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1715,14 +1728,14 @@ p {
 .login-page .login-page-wrapper .login-content .form-group .form-control {
   height: 70px;
   background-color: transparent;
-  border: 1px solid #6C6C6C;
+  border: 1px solid #6c6c6c;
   border-radius: 10px;
 }
 .login-page .login-page-wrapper .login-content .forget-pass {
   margin-top: 25px;
 }
 .login-page .login-page-wrapper .login-content .forget-pass a {
-  color: #6C6C6C;
+  color: #6c6c6c;
   text-decoration: underline;
 }
 .login-page .login-page-wrapper .login-content .btn-submit {
@@ -1763,8 +1776,8 @@ p {
   border-radius: 7px;
   margin-right: 10px;
   margin-left: 10px;
-  background-color: #F4F4F4 !important;
-  border: 0.5px solid #8E8E8E !important;
+  background-color: #f4f4f4 !important;
+  border: 0.5px solid #8e8e8e !important;
   text-align: center !important;
   font-size: 1.8rem;
   font-family: sukarbo;
@@ -1784,7 +1797,8 @@ p {
 }
 
 /* ================================================================ */
-input[type=number], input[type=email] {
+input[type="number"],
+input[type="email"] {
   text-align: right !important;
 }
 
@@ -1810,7 +1824,7 @@ input[type=number], input[type=email] {
   width: 80px;
   height: 80px;
   background-color: rgba(255, 255, 255, 0.71);
-  color: #60BA46;
+  color: #60ba46;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1830,7 +1844,7 @@ input[type=number], input[type=email] {
   background-color: rgba(33, 44, 129, 0.191);
   padding: 10px 50px;
   border-radius: 5px;
-  color: #212C81;
+  color: #212c81;
   font-size: 0.9rem;
   width: fit-content;
   margin-bottom: 20px;
@@ -1864,16 +1878,30 @@ input[type=number], input[type=email] {
   margin-bottom: 20px;
   border-radius: 10px;
 }
-.course-details-page .course-subjects .accordion .accordion-item .accordion-header {
+.course-details-page
+  .course-subjects
+  .accordion
+  .accordion-item
+  .accordion-header {
   border-radius: 10px;
 }
-.course-details-page .course-subjects .accordion .accordion-item .accordion-header .accordion-button {
+.course-details-page
+  .course-subjects
+  .accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button {
   padding: 24px 34px;
   border-radius: 10px;
   font-family: sukarbo;
   font-size: 1rem;
 }
-.course-details-page .course-subjects .accordion .accordion-item .accordion-header .accordion-button:focus {
+.course-details-page
+  .course-subjects
+  .accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button:focus {
   outline: 0 !important;
   box-shadow: none !important;
 }
@@ -1885,20 +1913,23 @@ input[type=number], input[type=email] {
 .course-details-page .course-subjects .accordion .accordion-body ul li:before {
   position: absolute;
   content: "";
-  color: #60BA46;
+  color: #60ba46;
   right: 0;
   top: 0;
 }
 .course-details-page .course-subjects .accordion .accordion-body p {
   font-size: 0.9rem;
 }
-.course-details-page .course-subjects .accordion .accordion-button:not(.collapsed) {
+.course-details-page
+  .course-subjects
+  .accordion
+  .accordion-button:not(.collapsed) {
   box-shadow: none !important;
   background-color: transparent !important;
   color: #000;
 }
 .course-details-page .course-subjects .accordion .accordion-button::after {
-  background-color: #60BA46;
+  background-color: #60ba46;
   width: 35px;
   height: 35px;
   display: flex;
@@ -1909,7 +1940,10 @@ input[type=number], input[type=email] {
   background-image: none;
   color: #fff;
 }
-.course-details-page .course-subjects .accordion .accordion-button:not(.collapsed)::after {
+.course-details-page
+  .course-subjects
+  .accordion
+  .accordion-button:not(.collapsed)::after {
   content: "";
 }
 .course-details-page .course-videos {
@@ -1930,10 +1964,11 @@ input[type=number], input[type=email] {
 }
 .course-details-page .course-test::after {
   content: "";
-  background-color: #60BA46;
+  background-color: #60ba46;
   opacity: 0.97;
 }
-.course-details-page .course-test .test-img, .course-details-page .course-test .test-link {
+.course-details-page .course-test .test-img,
+.course-details-page .course-test .test-link {
   position: relative;
   z-index: 4;
 }
@@ -1943,7 +1978,8 @@ input[type=number], input[type=email] {
   width: 40%;
   margin-right: 50px;
 }
-.course-details-page .course-test .test-content h5, .course-details-page .course-test .test-content p {
+.course-details-page .course-test .test-content h5,
+.course-details-page .course-test .test-content p {
   color: #fff;
 }
 .course-details-page .course-test .test-content h5 {
@@ -1959,8 +1995,8 @@ input[type=number], input[type=email] {
   margin-right: 50px;
 }
 .course-details-page .course-test .test-link .btn-style {
-  background-color: #009CDD;
-  border-color: #009CDD;
+  background-color: #009cdd;
+  border-color: #009cdd;
   padding: 12px 80px;
   border-radius: 6px;
 }
@@ -1984,7 +2020,7 @@ input[type=number], input[type=email] {
   width: 80px;
   height: 80px;
   background-color: rgba(255, 255, 255, 0.71);
-  color: #60BA46;
+  color: #60ba46;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2038,7 +2074,7 @@ input[type=number], input[type=email] {
 }
 .deparmtnet-details .nav .nav-link {
   padding: 13px 50px;
-  border: 1px solid #009CDD;
+  border: 1px solid #009cdd;
   border-radius: 12px;
   margin-left: 12px;
   margin-right: 12px;
@@ -2046,28 +2082,28 @@ input[type=number], input[type=email] {
   margin-bottom: 80px;
 }
 .deparmtnet-details .nav .nav-item:nth-child(1) .nav-link {
-  border: 1px solid #009CDD;
-  color: #009CDD;
+  border: 1px solid #009cdd;
+  color: #009cdd;
 }
 .deparmtnet-details .nav .nav-item:nth-child(2) .nav-link {
-  border: 1px solid #60BA46;
-  color: #60BA46;
+  border: 1px solid #60ba46;
+  color: #60ba46;
 }
 .deparmtnet-details .nav .nav-item:last-child .nav-link {
-  border: 1px solid #BA466D;
-  color: #BA466D;
+  border: 1px solid #ba466d;
+  color: #ba466d;
 }
 .deparmtnet-details .nav .nav-item:nth-child(1) .nav-link.active {
   color: #fff;
-  background-color: #009CDD;
+  background-color: #009cdd;
 }
 .deparmtnet-details .nav .nav-item:nth-child(2) .nav-link.active {
   color: #fff;
-  background-color: #60BA46;
+  background-color: #60ba46;
 }
 .deparmtnet-details .nav .nav-item:nth-child(3) .nav-link.active {
   color: #fff;
-  background-color: #BA466D;
+  background-color: #ba466d;
 }
 
 /* ================================================================ */
@@ -2104,14 +2140,14 @@ input[type=number], input[type=email] {
 }
 .box-style .form-group .form-control {
   height: 60px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   border-radius: 10px;
-  border: 0.5px solid #212C81;
+  border: 0.5px solid #212c81;
 }
 .box-style .form-group .nice-select {
   height: 60px;
-  background-color: #F7F7F7;
-  border: 0.5px solid #212C81;
+  background-color: #f7f7f7;
+  border: 0.5px solid #212c81;
   border-radius: 10px;
   text-align: right !important;
   line-height: 60px;
@@ -2181,7 +2217,7 @@ input[type=number], input[type=email] {
 }
 .test-page .teste-card h5 {
   font-size: 1.1rem;
-  color: #60BA46;
+  color: #60ba46;
   font-family: sukarbl;
 }
 .test-page .teste-card h5 span {
@@ -2239,7 +2275,7 @@ input[type=number], input[type=email] {
   stroke: #f39c12;
 }
 .test-page .teste-card .card:nth-child(2) svg circle:last-of-type {
-  stroke: #0070B5;
+  stroke: #0070b5;
 }
 .test-page .head {
   text-align: center;
@@ -2289,8 +2325,8 @@ input[type=number], input[type=email] {
   color: #212c81;
 }
 .test-page .btn-submit .btn-style.previous-btn {
-  background-color: #B6C2D8;
-  border-color: #B6C2D8;
+  background-color: #b6c2d8;
+  border-color: #b6c2d8;
   color: #000;
   margin-left: 20px;
 }
@@ -2360,7 +2396,7 @@ input[type=number], input[type=email] {
 .test-question label span {
   font-size: 1rem;
 }
-.test-question input[type=radio]:checked ~ .card-check .smallcircle {
+.test-question input[type="radio"]:checked ~ .card-check .smallcircle {
   background-color: #212c81;
 }
 
@@ -2411,14 +2447,14 @@ input[type=number], input[type=email] {
   transition: all 0.3s ease-in-out;
 }
 .profile-sidebar .side-list li a:hover {
-  background-color: #60BA46;
+  background-color: #60ba46;
 }
 .profile-sidebar .side-list li a:hover i,
 .profile-sidebar .side-list li a:hover span {
   color: #fff;
 }
 .profile-sidebar .side-list li a.active {
-  background-color: #60BA46;
+  background-color: #60ba46;
 }
 .profile-sidebar .side-list li a.active i,
 .profile-sidebar .side-list li a.active span {
@@ -2509,9 +2545,9 @@ input[type=number], input[type=email] {
 }
 .profile-user-data .btn-change-pass a {
   margin-top: 24px;
-  background-color: #009CDD;
+  background-color: #009cdd;
   color: #fff;
-  border-color: #009CDD;
+  border-color: #009cdd;
 }
 .profile-user-data .btn-change-pass a:hover {
   color: #fff;
@@ -2575,7 +2611,7 @@ input[type=number], input[type=email] {
 .profile-user-data .personal-img .btn:disabled {
   display: none;
 }
-.profile-user-data .personal-img .upload-btn-wrapper input[type=file] {
+.profile-user-data .personal-img .upload-btn-wrapper input[type="file"] {
   font-size: 100px;
   position: absolute;
   left: 0;
@@ -2623,12 +2659,12 @@ input[type=number], input[type=email] {
   font-size: 1.2rem;
 }
 .profile-certificate .course-card .card-img .delete i {
-  color: #EE362E;
+  color: #ee362e;
 }
 .profile-certificate .course-card .btn-style {
   border-radius: 24px !important;
-  background-color: #009CDD;
-  border-color: #009CDD;
+  background-color: #009cdd;
+  border-color: #009cdd;
   font-size: 0.9rem;
 }
 .profile-certificate .course-card .btn-buy2 .btn-style {
@@ -2791,15 +2827,18 @@ input[type=number], input[type=email] {
 .contact-us-page form .form-group {
   margin-bottom: 20px;
 }
-.contact-us-page form .form-control, .contact-us-page form .nice-select {
+.contact-us-page form .form-control,
+.contact-us-page form .nice-select {
   height: 60px;
-  background-color: #F7F7F7;
-  border: 0.5px solid #212C81;
+  background-color: #f7f7f7;
+  border: 0.5px solid #212c81;
 }
-.contact-us-page form .form-control .list, .contact-us-page form .nice-select .list {
+.contact-us-page form .form-control .list,
+.contact-us-page form .nice-select .list {
   width: 100%;
 }
-.contact-us-page form .form-control .list .option, .contact-us-page form .nice-select .list .option {
+.contact-us-page form .form-control .list .option,
+.contact-us-page form .nice-select .list .option {
   width: 100%;
 }
 .contact-us-page form .nice-select {
@@ -2845,7 +2884,8 @@ input[type=number], input[type=email] {
 .contact-us-page .contact-info ul li {
   margin-bottom: 30px;
 }
-.contact-us-page .contact-info ul li span, .contact-us-page .contact-info ul li a {
+.contact-us-page .contact-info ul li span,
+.contact-us-page .contact-info ul li a {
   color: #fff;
 }
 .contact-us-page .contact-info ul li i {
@@ -2909,7 +2949,7 @@ input[type=number], input[type=email] {
   width: 77px;
   height: 77px;
   border-radius: 50%;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2920,7 +2960,7 @@ input[type=number], input[type=email] {
   visibility: hidden;
   opacity: 0;
 }
-.payment-methods input[type=radio]:checked ~ .card-method {
+.payment-methods input[type="radio"]:checked ~ .card-method {
   border: 1px solid #212c81;
   box-shadow: 0 3px 5px rgba(0, 73, 200, 0.44);
 }
@@ -2929,17 +2969,30 @@ input[type=number], input[type=email] {
 /* ================================================================ */
 /* ================================================================ */
 /* Shared styles  */
-.most-courses-subsription, .discount-courses, .watch_now_section, .course-details-page .course-test, .test-page .teste-card, .contact-us-page .contact-info {
+.most-courses-subsription,
+.discount-courses,
+.watch_now_section,
+.course-details-page .course-test,
+.test-page .teste-card,
+.contact-us-page .contact-info {
   background-position: center;
   background-size: cover;
 }
 
-.slick-arrow::before, .course-details-page .course-subjects .accordion .accordion-body ul li:before, .course-details-page .course-subjects .accordion .accordion-button::after {
+.slick-arrow::before,
+.course-details-page .course-subjects .accordion .accordion-body ul li:before,
+.course-details-page .course-subjects .accordion .accordion-button::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
-.header::after, .most-courses-subsription::after, .discount-courses::after, .watch_now_section::after, .footer::after, .course-details-page .course-test::after, .contact-us-page .contact-info::after {
+.header::after,
+.most-courses-subsription::after,
+.discount-courses::after,
+.watch_now_section::after,
+.footer::after,
+.course-details-page .course-test::after,
+.contact-us-page .contact-info::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2949,7 +3002,12 @@ input[type=number], input[type=email] {
   height: 100%;
 }
 
-.course-card .card-body .card-text, .watch_now_section .watch_now_cards .big_watch .card_body .card_title, .watch_now_section .watch_now_cards .wide_news_card .card_title h5, .wide_news_card .wide_body .card_title h5, .course-details-page .course-test .test-content p, .notification-page .wrapper ul li a p {
+.course-card .card-body .card-text,
+.watch_now_section .watch_now_cards .big_watch .card_body .card_title,
+.watch_now_section .watch_now_cards .wide_news_card .card_title h5,
+.wide_news_card .wide_body .card_title h5,
+.course-details-page .course-test .test-content p,
+.notification-page .wrapper ul li a p {
   overflow: hidden;
   display: -webkit-box;
   text-overflow: ellipsis;

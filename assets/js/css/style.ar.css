@@ -1,0 +1,87 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span {
+  font-family: "Almarai", sans-serif !important;
+}
+
+.vertical-image {
+  margin-left: 15px;
+}
+.text-overlay-paymentsolution h5 i {
+  margin-right: 5px;
+}
+.img-card {
+  margin-left: 12px;
+}
+.img-card1 {
+  margin-left: 12px;
+}
+.bottom:nth-child(2) {
+  margin-right: 15px; /* Adjust the margin value as needed */
+}
+.one-app-payments img {
+  margin-left: 12px;
+}
+.fourty-reviews {
+  margin-right: 10px;
+}
+.category-icon span {
+  margin-left: 4px !important;
+}
+#selectedCategory {
+  margin-left: 8px;
+}
+.slick-dots .custom-dot-payment-slider {
+  right: -570px;
+}
+.btn-group .get-started {
+  margin-left: 10px;
+}
+.border-right-ltr {
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  height: 190px;
+  border-right: 1px solid rgba(230, 230, 232, 1);
+}
+.border-left-ltr {
+  position: absolute;
+  top: 40px;
+  left: -8px;
+  height: 190px;
+  margin-left: 10px;
+  border-left: 1px solid rgba(230, 230, 232, 1);
+}
+
+.senior-level-icon .career-icon {
+  margin-left: 10px;
+}
+.listen-now-link {
+  margin-right: 10px;
+}
+.consumer-features .list-unstyled.column-two li {
+  padding-right: 12px;
+}
+.column-one .fa-caret-right {
+  margin-left: 1px;
+}
+.navbar-brand {
+  float: left;
+}
+.pagination-word-left .left {
+  float: right !important;
+}
+.recharge-bill-left {
+  margin-right: 25px;
+}
+.location-info {
+  padding-left: 10px;
+}

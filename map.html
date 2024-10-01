@@ -470,15 +470,16 @@ async function searchLocations() {
         return titleMatch && cityMatch && areaMatch && categoryMatch;
     });
 
-// Use recorded data from the API directly
-filteredLocations.forEach(location => {
-    if (userLatitude === null || userLongitude === null) {
-        location.distance = null;
-    } else {
-        // Preserve distance from the API as is
-        location.distance = location.distance || null;
-    }
-});
+
+ // Use recorded data from the API directly
+ filteredLocations.forEach(location => {
+            if (userLatitude === null || userLongitude === null) {
+                location.distance = "****";
+            } else {
+                // Preserve distance from the API as is
+                location.distance = location.distance || "****";
+            }
+        });
 
 
     displayLocations(filteredLocations, language);
